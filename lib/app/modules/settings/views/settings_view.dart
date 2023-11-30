@@ -21,13 +21,13 @@ class SettingsView extends GetView<SettingsController> {
         child: ListView(
           shrinkWrap: true,
           children: [
-            Text(
-              'Account',
-              style: theme.textTheme.displayMedium?.copyWith(
-                fontSize: 20.sp,
-                fontWeight: FontWeight.normal,
-              ),
-            ),
+            // Text(
+            //   'Account',
+            //   style: theme.textTheme.displayMedium?.copyWith(
+            //     fontSize: 20.sp,
+            //     fontWeight: FontWeight.normal,
+            //   ),
+            // ),
             16.verticalSpace,
             const SettingsItem(
               title: 'John Doe',
@@ -53,16 +53,16 @@ class SettingsView extends GetView<SettingsController> {
               title: 'Language',
               icon: Icons.language,
             ),
-            8.verticalSpace,
-            const SettingsItem(
-              title: 'Help',
-              icon: Icons.settings,
-            ),
-            8.verticalSpace,
-            const SettingsItem(
-              title: 'Sign Out',
-              icon: Icons.logout,
-            ),
+            // 8.verticalSpace,
+            // const SettingsItem(
+            //   title: 'Help',
+            //   icon: Icons.settings,
+            // ),
+            // 8.verticalSpace,
+            // const SettingsItem(
+            //   title: 'Sign Out',
+            //   icon: Icons.logout,
+            // ),
             8.verticalSpace,
           ],
         ),
