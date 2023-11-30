@@ -149,16 +149,12 @@ class NotificationController {
   static Future<void> onActionReceivedMethod(
       ReceivedAction receivedAction) async {
     Map<String, String?>? payload = receivedAction.payload;
-    // TODO handle clicking on notification
-    // example
-    // String routeToGetTo = payload['route'];
-    // normal navigation (Get.toNamed) will throw error
+
     Get.key.currentState?.pushNamed(Routes.HOME);
   }
 }
 
 class NotificationChannels {
-  // chat channel (for messages only)
   static String get chatChannelKey => "chat_channel";
   static String get chatChannelName => "Chat channel";
   static String get chatGroupKey => "chat group key";
@@ -166,7 +162,6 @@ class NotificationChannels {
   static String get chatChannelGroupName => "Chat notifications channels";
   static String get chatChannelDescription => "Chat notifications channels";
 
-  // general channel (for all other notifications)
   static String get generalChannelKey => "general_channel";
   static String get generalGroupKey => "general group key";
   static String get generalChannelGroupKey => "general_channel_group";

@@ -1,9 +1,15 @@
 class Constants {
+  // ENdpoint API
   static const baseUrl = 'http://172.17.0.1:8888';
   static const postMessage = '$baseUrl/send_message/';
   static const getMessages = '$baseUrl/get_messages/';
+
+  // Logo
   static const logo = 'assets/images/app_icon.png';
-  static const noData = 'assets/images/no_data.png';
+
+  // No Data
+  static const noDataLight = 'assets/images/no_data_light.png';
+  static const noDataDark = 'assets/images/no_data_dark.png';
 
   // Writing
   static const books = 'assets/images/Books.png';
