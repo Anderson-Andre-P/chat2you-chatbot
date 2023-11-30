@@ -1,23 +1,35 @@
 import 'package:get/get.dart';
 
-class HistoryController extends GetxController {
-  //TODO: Implement HistoryController
+import '../model/history_model.dart';
 
-  final count = 0.obs;
+class HistoryController extends GetxController {
+  final List<ChatModel> _chats = dummyChatData;
+  late List<ChatModel> _filteredChats;
+
+  List<ChatModel> get filteredChats => _filteredChats;
+
   @override
   void onInit() {
+    _filteredChats =
+        _chats; // Inicialmente, a lista filtrada é a lista completa
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  void filterChats(String query) {
+    if (query.isEmpty) {
+      _filteredChats =
+          _chats; // Se a consulta estiver vazia, mostrar todos os bate-papos
+    } else {
+      // Filtrar bate-papos com base na consulta
+      _filteredChats = _chats
+          .where(
+              (chat) => chat.title.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
 
-  @override
-  void onClose() {
-    super.onClose();
+    // Adiar a chamada do update para ocorrer fora do ciclo de construção
+    Future.delayed(Duration.zero, () {
+      update();
+    });
   }
-
-  void increment() => count.value++;
 }
