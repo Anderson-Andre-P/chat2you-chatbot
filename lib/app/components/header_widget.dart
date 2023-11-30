@@ -5,15 +5,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
   final String title;
   final ThemeData theme;
   final String logoPath;
+  final List<IconData>? actionIcons;
+  final List<VoidCallback>? onIconPressed;
 
-  const CustomAppBar(
-      {super.key,
-      required this.title,
-      required this.theme,
-      required this.logoPath});
+  const CustomAppBar({
+    super.key,
+    required this.title,
+    required this.theme,
+    required this.logoPath,
+    this.actionIcons,
+    this.onIconPressed,
+  });
 
   @override
-  Size get preferredSize => const Size.fromHeight(100);
+  Size get preferredSize => const Size.fromHeight(52.0);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +38,25 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
           logoPath,
         ),
       ),
+      actions: _buildActionIcons(),
     );
+  }
+
+  List<Widget> _buildActionIcons() {
+    List<Widget> widgets = [];
+
+    if (actionIcons != null && onIconPressed != null) {
+      for (int i = 0; i < actionIcons!.length; i++) {
+        widgets.add(
+          IconButton(
+            icon: Icon(actionIcons![i]),
+            onPressed: onIconPressed![i],
+          ),
+        );
+      }
+    }
+
+    return widgets;
   }
 
   @override
