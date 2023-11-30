@@ -53,4 +53,9 @@ class Strings {
   static const String urlNotFound = 'Url not found';
   static const String retry = 'retry';
   static const String internetError = 'internet error';
+
+  // Not found
+  static const String notFound = 'Nothing Found';
+  static const String notFoundSorry =
+      'Sorry, the keyword you entered cannot be found, please check again or search with another keyword.';
 }

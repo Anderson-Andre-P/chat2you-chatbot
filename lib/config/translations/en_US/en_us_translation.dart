@@ -54,4 +54,9 @@ const Map<String, String> enUs = {
   Strings.phraseFour: "These are just a few examples of what i can do.",
   Strings.inputChat: 'Ask me anything...',
   Strings.stopGenerating: 'Stop generating...',
+
+  // Not found
+  Strings.notFound: 'Nothing Found',
+  Strings.notFoundSorry:
+      'Sorry, the keyword you entered cannot be found, please check again or search with another keyword.',
 };

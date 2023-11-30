@@ -55,4 +55,9 @@ const Map<String, String> ptBr = {
   Strings.phraseFour: "Estes são apenas alguns exemplos do que posso fazer.",
   Strings.inputChat: 'Me pergunte qualquer coisa...',
   Strings.stopGenerating: 'Parar de gerar...',
+
+  // Not found
+  Strings.notFound: 'Nada Encontrado',
+  Strings.notFoundSorry:
+      'Desculpe, a palavra-chave inserida não pode ser encontrada, verifique novamente ou pesquise com outra palavra-chave.',
 };
