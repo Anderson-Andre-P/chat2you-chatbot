@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSize {
   final String title;
-  final ThemeData theme;
-  final String logoPath;
+  final bool hasDrawer;
   final List<IconData>? actionIcons;
   final List<VoidCallback>? onIconPressed;
 
   const CustomAppBar({
     super.key,
     required this.title,
-    required this.theme,
-    required this.logoPath,
     this.actionIcons,
     this.onIconPressed,
+    this.hasDrawer = false,
   });
 
   @override
@@ -25,19 +24,22 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
     return AppBar(
       title: Text(
         title,
-        style: theme.textTheme.displayMedium?.copyWith(
+        style: Get.theme.textTheme.displayMedium?.copyWith(
           fontSize: 23.sp,
           fontWeight: FontWeight.normal,
         ),
       ),
+      leading: hasDrawer
+          ? IconButton(
+              icon: const Icon(Icons.menu),
+              color: Get.theme.iconTheme.color,
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            )
+          : null,
       centerTitle: true,
-      backgroundColor: theme.scaffoldBackgroundColor,
-      leading: Padding(
-        padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 14.w),
-        child: Image.asset(
-          logoPath,
-        ),
-      ),
+      backgroundColor: Get.theme.scaffoldBackgroundColor,
       actions: _buildActionIcons(),
     );
   }
@@ -51,6 +53,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
           IconButton(
             icon: Icon(actionIcons![i]),
             onPressed: onIconPressed![i],
+            color: Get.theme.iconTheme.color,
           ),
         );
       }
