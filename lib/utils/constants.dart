@@ -6,6 +6,9 @@ class Constants {
 
   // Logo
   static const logo = 'assets/images/app_icon.png';
+  static const appleLogo = 'assets/vectors/apple_logo.svg';
+  static const facebookLogo = 'assets/vectors/facebook_logo.svg';
+  static const googleLogo = 'assets/vectors/google_logo.svg';
 
   // No Data
   static const noDataLight = 'assets/images/no_data_light.png';
