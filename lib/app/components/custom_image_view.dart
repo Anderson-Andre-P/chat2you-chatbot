@@ -32,8 +32,6 @@ class CustomImageView extends StatelessWidget {
   BorderRadius? radius;
   BoxBorder? border;
 
-  ///a [CustomImageView] it can be used for showing any type of images
-  /// it will shows the placeholder image if image is not found on network image
   CustomImageView({
     super.key,
     this.url,
@@ -72,7 +70,6 @@ class CustomImageView extends StatelessWidget {
     );
   }
 
-  ///build the image with border radius
   _buildCircleImage() {
     if (radius != null) {
       return ClipRRect(
@@ -84,7 +81,6 @@ class CustomImageView extends StatelessWidget {
     }
   }
 
-  ///build the image with border and border radius style
   _buildImageWithBorder() {
     if (border != null) {
       return Container(
