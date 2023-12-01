@@ -2,6 +2,7 @@ import '../strings_enum.dart';
 
 const Map<String, String> ptBr = {
   Strings.hello: 'Olá!', // Apenas para testes
+
   // Padrão
   Strings.loading: 'Carregando',
   Strings.changeTheme: 'Mudar tema',
@@ -16,7 +17,7 @@ const Map<String, String> ptBr = {
   Strings.internetError:
       'Erro ocorrido, verifique sua conexão com a internet! ⚠️',
 
-  // Integração e Login
+  // Login
   Strings.titleOfTheApp: 'Chat2You',
   Strings.socialLoginFacebook: 'Continuar com Facebook',
   Strings.socialLoginGoogle: 'Continuar com Google',
@@ -33,6 +34,18 @@ const Map<String, String> ptBr = {
   Strings.remember: 'Lembre-se de mim',
   Strings.error: 'Erro!',
   Strings.invalidCredentials: 'Credenciais inválidas, tente novamente...',
+
+  // Integração
+  Strings.skipOnboarding: 'Pular introdução',
+  Strings.onboardingTitleOne: 'The best AI Chatbot app in this century',
+  Strings.onboardingTitleTwo: 'Try premium for your unlimited usage',
+  Strings.onboardingTitleThree: 'Various AI Assistants to help you more',
+  Strings.onboardingSubtitleOne:
+      'I\'m here to make your life easier and answer your questions',
+  Strings.onboardingSubtitleTwo:
+      'Premium plan gives you access to exclusive features',
+  Strings.onboardingSubtitleThree:
+      'I\'m here to make your experience with us easier and more enjoyable',
 
   // BottomBar
   Strings.chat: 'Conversas',

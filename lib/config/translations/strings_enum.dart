@@ -19,6 +19,21 @@ class Strings {
   static const String invalidCredentials =
       'Invalid credentials, please try again...';
 
+  // Onboarding
+  static const String skipOnboarding = 'Skip onboarding';
+  static const String onboardingTitleOne =
+      'The best AI Chatbot app in this century';
+  static const String onboardingTitleTwo =
+      'Try premium for your unlimited usage';
+  static const String onboardingTitleThree =
+      'Various AI Assistants to help you more';
+  static const String onboardingSubtitleOne =
+      'I\'m here to make your life easier and answer your questions';
+  static const String onboardingSubtitleTwo =
+      'Premium plan gives you access to exclusive features';
+  static const String onboardingSubtitleThree =
+      'I\'m here to make your experience with us easier and more enjoyable';
+
   // Home screen without chats
   static const String welcomeTitle = "Welcome to chat2you 👋";
   static const String welcomeSubtitle =

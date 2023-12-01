@@ -15,7 +15,7 @@ const Map<String, String> enUs = {
   Strings.retry: 'Retry',
   Strings.internetError: 'Error Occurred Check Your Internet Connection! ⚠️',
 
-  // Onboarding and Login
+  // Login
   Strings.titleOfTheApp: 'Chat2You',
   Strings.socialLoginFacebook: 'Continue with Facebook',
   Strings.or: 'or',
@@ -32,6 +32,18 @@ const Map<String, String> enUs = {
   Strings.remember: 'Remember me',
   Strings.error: 'Error!',
   Strings.invalidCredentials: 'Invalid credentials, please try again...',
+
+  // Onboarding
+  Strings.skipOnboarding: 'Skip onboarding',
+  Strings.onboardingTitleOne: 'The best AI Chatbot app in this century',
+  Strings.onboardingTitleTwo: 'Try premium for your unlimited usage',
+  Strings.onboardingTitleThree: 'Various AI Assistants to help you more',
+  Strings.onboardingSubtitleOne:
+      'I\'m here to make your life easier and answer your questions',
+  Strings.onboardingSubtitleTwo:
+      'Premium plan gives you access to exclusive features',
+  Strings.onboardingSubtitleThree:
+      'I\'m here to make your experience with us easier and more enjoyable',
 
   // BottomBar
   Strings.chat: 'Chat',

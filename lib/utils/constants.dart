@@ -4,6 +4,11 @@ class Constants {
   static const postMessage = '$baseUrl/send_message/';
   static const getMessages = '$baseUrl/get_messages/';
 
+  // Onboarding
+  static const onboardingImageOne = 'assets/images/onboardingImageOne.png';
+  static const onboardingImageTwo = 'assets/images/onboardingImageTwo.png';
+  static const onboardingImageThree = 'assets/images/onboardingImageThree.png';
+
   // Logo
   static const logo = 'assets/images/app_icon.png';
   static const appleLogo = 'assets/vectors/apple_logo.svg';

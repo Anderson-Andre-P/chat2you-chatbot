@@ -1,90 +1,135 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../config/translations/strings_enum.dart';
 import '../../../../utils/constants.dart';
 import '../../../components/custom_button.dart';
-import '../../../data/local/my_shared_pref.dart';
 import '../../../routes/app_pages.dart';
-import '../controllers/onboarding_controller.dart';
 
-class OnboardingView extends GetView<OnboardingController> {
+class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
 
   @override
+  _OnboardingViewState createState() => _OnboardingViewState();
+}
+
+class _OnboardingViewState extends State<OnboardingView> {
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
+
+  final List<Map<String, String>> _pages = [
+    {
+      'onboardingImage': Constants.onboardingImageOne,
+      'onboardingTitle': Strings.onboardingTitleOne,
+      'onboardingSubtitle': Strings.onboardingSubtitleOne,
+    },
+    {
+      'onboardingImage': Constants.onboardingImageTwo,
+      'onboardingTitle': Strings.onboardingTitleTwo,
+      'onboardingSubtitle': Strings.onboardingSubtitleTwo,
+    },
+    {
+      'onboardingImage': Constants.onboardingImageThree,
+      'onboardingTitle': Strings.onboardingTitleThree,
+      'onboardingSubtitle': Strings.onboardingSubtitleThree,
+    },
+  ];
+
+  @override
   Widget build(BuildContext context) {
-    final isLightTheme = MySharedPref.getThemeIsLight();
-    final theme = context.theme;
     return Scaffold(
-      body: Stack(
-        children: [
-          Positioned.fill(
-            child: Container(
-              color: isLightTheme
-                  ? theme.scaffoldBackgroundColor
-                  : theme.scaffoldBackgroundColor,
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Stack(
+          children: [
+            PageView.builder(
+              controller: _pageController,
+              itemCount: _pages.length,
+              onPageChanged: (index) {
+                setState(() {
+                  _currentPage = index;
+                });
+              },
+              itemBuilder: (context, index) {
+                return buildPage(
+                  _pages[index]['onboardingImage']!,
+                  _pages[index]['onboardingTitle']!,
+                  _pages[index]['onboardingSubtitle']!,
+                );
+              },
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.w),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                95.verticalSpace,
-                CircleAvatar(
-                  radius: 33.r,
-                  backgroundColor: theme.scaffoldBackgroundColor,
-                  child: Image.asset(
-                    Constants.logo,
-                    width: 40.33.w,
-                    height: 33.40.h,
-                  ),
-                ).animate().fade().slideY(
-                      duration: 300.ms,
-                      begin: -1,
-                      curve: Curves.easeInSine,
-                    ),
-                30.verticalSpace,
-                Text(
-                  Strings.welcomeTitle.tr,
-                  style: theme.textTheme.displayLarge,
-                  textAlign: TextAlign.center,
-                ).animate().fade().slideY(
-                      duration: 300.ms,
-                      begin: -1,
-                      curve: Curves.easeInSine,
-                    ),
-                24.verticalSpace,
-                Text(
-                  Strings.welcomeSubtitle.tr,
-                  style: theme.textTheme.bodyLarge,
-                  textAlign: TextAlign.center,
-                ).animate().fade().slideY(
-                      duration: 300.ms,
-                      begin: 1,
-                      curve: Curves.easeInSine,
-                    ),
-                500.verticalSpace,
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 70.w),
-                  child: CustomButton(
-                    text: Strings.enter.tr,
-                    onPressed: () => Get.toNamed(Routes.TYPEOFLOGIN),
-                    fontSize: 16.sp,
-                    verticalPadding: 16.h,
-                    hasShadow: false,
-                  ).animate().fade().slideY(
-                        duration: 300.ms,
-                        begin: 1,
-                        curve: Curves.easeInSine,
-                      ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: CustomButton(
+                text: Strings.skipOnboarding.tr,
+                hasShadow: false,
+                onPressed: () {
+                  Get.offNamed(Routes.TYPEOFLOGIN);
+                },
+              ),
+            ),
+            Positioned(
+              bottom: 64,
+              left: 0,
+              right: 0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  _pages.length,
+                  (index) => buildIndicator(index),
                 ),
-              ],
+              ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildPage(String onboardingImage, String onboardingTitle,
+      String onboardingSubtitle) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(
+          onboardingImage,
+        ),
+        16.verticalSpace,
+        Text(
+          onboardingTitle,
+          textAlign: TextAlign.center,
+          style: Get.theme.textTheme.displayLarge?.copyWith(
+            fontSize: 33.sp,
+            fontWeight: FontWeight.normal,
           ),
-        ],
+        ),
+        16.verticalSpace,
+        Text(
+          onboardingSubtitle,
+          textAlign: TextAlign.center,
+          style: Get.theme.textTheme.displaySmall?.copyWith(
+            fontSize: 16.sp,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        96.verticalSpace,
+      ],
+    );
+  }
+
+  Widget buildIndicator(int index) {
+    return Container(
+      width: index == _currentPage ? 10 : 20,
+      height: 10,
+      margin: const EdgeInsets.symmetric(horizontal: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(10.r)),
+        color: index == _currentPage
+            ? Get.theme.primaryColor
+            : Get.theme.primaryColor.withOpacity(0.2),
       ),
     );
   }
