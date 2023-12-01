@@ -19,8 +19,7 @@ class HistoryView extends GetView<HistoryController> {
     return Scaffold(
       appBar: CustomAppBar(
         title: "Chat History",
-        theme: theme,
-        logoPath: Constants.logo,
+        hasDrawer: false,
         actionIcons: const [Icons.search, Icons.delete],
         onIconPressed: [
           () {

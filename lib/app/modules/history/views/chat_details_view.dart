@@ -13,8 +13,6 @@ class ChatDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = context.theme;
-
     return Scaffold(
       appBar: AppBar(
         title: Text(chat.title),
