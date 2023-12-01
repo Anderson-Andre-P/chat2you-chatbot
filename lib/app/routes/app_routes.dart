@@ -9,10 +9,12 @@ abstract class Routes {
   static const SETTINGS = _Paths.SETTINGS;
   static const SPLASH = _Paths.SPLASH;
   static const ONBOARDING = _Paths.ONBOARDING;
-  static const DEV = _Paths.DEV;
   static const CONFIG = _Paths.CONFIG;
   static const HISTORY = _Paths.HISTORY;
   static const PROFILE = _Paths.PROFILE;
+  static const SIGNIN = _Paths.SIGNIN;
+  static const TYPEOFLOGIN = _Paths.TYPEOFLOGIN;
+  static const SIGNUP = _Paths.SIGNUP;
 }
 
 abstract class _Paths {
@@ -23,8 +25,10 @@ abstract class _Paths {
   static const SETTINGS = '/settings';
   static const SPLASH = '/splash';
   static const ONBOARDING = '/onboarding';
-  static const DEV = '/dev';
   static const CONFIG = '/config';
   static const HISTORY = '/history';
   static const PROFILE = '/profile';
+  static const SIGNIN = '/signin';
+  static const TYPEOFLOGIN = '/typeoflogin';
+  static const SIGNUP = '/signup';
 }
