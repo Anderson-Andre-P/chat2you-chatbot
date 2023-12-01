@@ -1,5 +1,4 @@
 import 'package:chat2you/app/components/custom_button.dart';
-import 'package:chat2you/app/components/header_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -7,6 +6,8 @@ import 'package:get/get.dart';
 import '../../../../config/translations/strings_enum.dart';
 import '../../../../utils/constants.dart';
 import '../../../components/custom_image_view.dart';
+import '../../../components/header_widget.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -15,11 +16,20 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     final theme = context.theme;
     return Scaffold(
+      // appBar: AppBar(
+      //   title: const Text('Drawer Example'),
+      // ),
       appBar: CustomAppBar(
-        logoPath: Constants.logo,
         title: Strings.titleOfTheApp.tr,
-        theme: context.theme,
+        hasDrawer: true,
+        actionIcons: const [Icons.notifications],
+        onIconPressed: [
+          () {
+            Scaffold.of(context).openDrawer();
+          }
+        ],
       ),
+      drawer: const CustomDrawer(),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 24.w),
         child: Column(
@@ -126,5 +136,54 @@ class HomeView extends GetView<HomeController> {
     //     ],
     //   ),
     // );
+  }
+}
+
+void _openDrawer(BuildContext context) {
+  Scaffold.of(context).openDrawer();
+}
+
+// void _openDrawer(BuildContext context) {
+//   showModalBottomSheet(
+//     context: context,
+//     builder: (BuildContext context) {
+//       return const CustomDrawer();
+//     },
+//   );
+// }
+
+class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      backgroundColor: Get.theme.scaffoldBackgroundColor,
+      child: Column(
+        children: [
+          const UserAccountsDrawerHeader(
+            accountEmail: Text("jodo.test.dwo@mail.com"),
+            accountName: Text("John Doe"),
+            currentAccountPicture: CircleAvatar(
+              child: Text("JD"),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: Text(Strings.profile.tr),
+            tileColor: Get.theme.scaffoldBackgroundColor,
+            onTap: () => Get.toNamed(Routes.PROFILE),
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings),
+            title: Text(Strings.settings.tr),
+            tileColor: Get.theme.scaffoldBackgroundColor,
+            onTap: () => Get.toNamed(Routes.CONFIG),
+          ),
+        ],
+      ),
+    );
   }
 }
