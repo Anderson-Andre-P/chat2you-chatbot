@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../../utils/constants.dart';
 import '../../../components/custom_filter_chip.dart';
 import '../../../components/custom_image_view.dart';
 import '../../../components/header_widget.dart';
@@ -17,10 +16,8 @@ class AiAssistantsView extends GetView<AiAssistantsController> {
     final theme = context.theme;
 
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         title: "AI Assistants",
-        theme: theme,
-        logoPath: Constants.logo,
       ),
       body: Column(
         children: [
