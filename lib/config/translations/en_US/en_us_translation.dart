@@ -16,20 +16,22 @@ const Map<String, String> enUs = {
   Strings.internetError: 'Error Occurred Check Your Internet Connection! ⚠️',
 
   // Onboarding and Login
-  Strings.titleOfTheApp: 'chat2you',
+  Strings.titleOfTheApp: 'Chat2You',
   Strings.socialLoginFacebook: 'Continue with Facebook',
   Strings.or: 'or',
   Strings.socialLoginGoogle: 'Continue with Google',
   Strings.socialLoginApple: 'Continue with Apple',
   Strings.signInButton: 'Sign In With Email',
   Strings.dontaHaveAccount: 'Don\'t have an account?',
-  Strings.signUnButton: 'Sign Up',
+  Strings.signUpButton: 'Sign Up',
   Strings.email: 'Email',
   Strings.password: 'Password',
   Strings.enter: 'Enter',
   Strings.forgotPassword: 'I forgot my password',
   Strings.loginSubtitle: 'Let\'s drive into your account!',
   Strings.remember: 'Remember me',
+  Strings.error: 'Error!',
+  Strings.invalidCredentials: 'Invalid credentials, please try again...',
 
   // BottomBar
   Strings.chat: 'Chat',

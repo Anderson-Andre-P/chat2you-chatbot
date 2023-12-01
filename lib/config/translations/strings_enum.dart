@@ -1,13 +1,13 @@
 class Strings {
   static const String hello = 'Hello!'; // Only for tests
   // Onboarding and Login
-  static const String titleOfTheApp = 'chat2you';
+  static const String titleOfTheApp = 'Chat2You';
   static const String socialLoginFacebook = 'Continue with Facebook';
   static const String socialLoginGoogle = 'Continue with Google';
   static const String socialLoginApple = 'Continue with Apple';
   static const String signInButton = 'Sign In With Email';
   static const String dontaHaveAccount = 'Don\'t have an account?';
-  static const String signUnButton = 'Sign Up';
+  static const String signUpButton = 'Sign Up';
   static const String or = 'or';
   static const String email = 'Email';
   static const String password = 'Password';
@@ -15,6 +15,9 @@ class Strings {
   static const String forgotPassword = 'I forgot my password';
   static const String loginSubtitle = 'Let\'s drive into your account!';
   static const String remember = 'Remember me';
+  static const String error = 'Error!';
+  static const String invalidCredentials =
+      'Invalid credentials, please try again...';
 
   // Home screen without chats
   static const String welcomeTitle = "Welcome to chat2you 👋";

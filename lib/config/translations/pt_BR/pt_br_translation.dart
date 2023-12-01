@@ -17,13 +17,13 @@ const Map<String, String> ptBr = {
       'Erro ocorrido, verifique sua conexão com a internet! ⚠️',
 
   // Integração e Login
-  Strings.titleOfTheApp: 'chat2you',
+  Strings.titleOfTheApp: 'Chat2You',
   Strings.socialLoginFacebook: 'Continuar com Facebook',
   Strings.socialLoginGoogle: 'Continuar com Google',
   Strings.socialLoginApple: 'Continuar com Apple',
   Strings.signInButton: 'Entrar com o Email',
   Strings.dontaHaveAccount: 'Não possui uma conta?',
-  Strings.signUnButton: 'Cadastrar',
+  Strings.signUpButton: 'Cadastrar',
   Strings.or: 'ou',
   Strings.email: 'Email',
   Strings.password: 'Senha',
@@ -31,6 +31,8 @@ const Map<String, String> ptBr = {
   Strings.forgotPassword: 'Esqueci minha senha',
   Strings.loginSubtitle: 'Vamos acessar sua conta!',
   Strings.remember: 'Lembre-se de mim',
+  Strings.error: 'Erro!',
+  Strings.invalidCredentials: 'Credenciais inválidas, tente novamente...',
 
   // BottomBar
   Strings.chat: 'Conversas',
