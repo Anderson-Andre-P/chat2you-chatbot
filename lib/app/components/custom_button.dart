@@ -20,6 +20,7 @@ class CustomButton extends StatelessWidget {
   final double shadowBlurRadius;
   final double shadowSpreadRadius;
   final double? width;
+  final double? height;
   final double? verticalPadding;
   final bool disabled;
 
@@ -42,6 +43,7 @@ class CustomButton extends StatelessWidget {
     this.shadowBlurRadius = 3,
     this.shadowSpreadRadius = 1,
     this.width,
+    this.height,
     this.verticalPadding,
     this.disabled = false,
   });
@@ -59,6 +61,7 @@ class CustomButton extends StatelessWidget {
           onTap: !disabled ? onPressed : null,
           child: Ink(
             width: width ?? double.infinity,
+            height: height,
             padding: EdgeInsets.symmetric(
               horizontal: 16.w,
               vertical: verticalPadding ?? 16.h,
