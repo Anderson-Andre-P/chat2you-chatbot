@@ -1,13 +1,11 @@
 import 'package:chat2you/app/modules/ai%20assistants/views/ai_assistants_view.dart';
 import 'package:chat2you/app/modules/history/views/history_view.dart';
-import 'package:chat2you/app/modules/profile/views/profile_view.dart';
 import 'package:chat2you/config/translations/strings_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../home/views/home_view.dart';
-import '../../settings/views/settings_view.dart';
 import '../controllers/base_controller.dart';
 
 class BaseView extends GetView<BaseController> {
@@ -27,8 +25,6 @@ class BaseView extends GetView<BaseController> {
               HomeView(),
               AiAssistantsView(),
               HistoryView(),
-              ProfileView(),
-              SettingsView(),
             ],
           ),
         ),
@@ -73,14 +69,6 @@ class BaseView extends GetView<BaseController> {
                 _mBottomNavItem(
                   label: Strings.history.tr,
                   icon: Icons.history,
-                ),
-                _mBottomNavItem(
-                  label: Strings.profile.tr,
-                  icon: Icons.person,
-                ),
-                _mBottomNavItem(
-                  label: Strings.settings.tr,
-                  icon: Icons.settings,
                 ),
               ],
               onTap: controller.changeScreen,
