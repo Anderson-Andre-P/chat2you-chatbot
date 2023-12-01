@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class CustomSnackBar {
-  static showCustomSnackBar(
-      {required String title, required String message, Duration? duration}) {
+  static void showCustomSnackBar({
+    required String title,
+    required String message,
+    Duration? duration,
+  }) {
     Get.snackbar(
       title,
       message,
+      borderRadius: 4.r,
       duration: duration ?? const Duration(seconds: 3),
-      margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
+      margin: EdgeInsets.only(top: 24.w, left: 24.w, right: 24.w),
       colorText: Colors.white,
       backgroundColor: Colors.green,
       icon: const Icon(
@@ -18,16 +23,18 @@ class CustomSnackBar {
     );
   }
 
-  static showCustomErrorSnackBar(
-      {required String title,
-      required String message,
-      Color? color,
-      Duration? duration}) {
+  static void showCustomErrorSnackBar({
+    required String title,
+    required String message,
+    Color? color,
+    Duration? duration,
+  }) {
     Get.snackbar(
       title,
       message,
+      borderRadius: 4.r,
       duration: duration ?? const Duration(seconds: 3),
-      margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
+      margin: EdgeInsets.only(top: 24.w, left: 24.w, right: 24.w),
       colorText: Colors.white,
       backgroundColor: color ?? Colors.redAccent,
       icon: const Icon(
