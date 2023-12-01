@@ -71,7 +71,7 @@ class OnboardingView extends GetView<OnboardingController> {
                   padding: EdgeInsets.symmetric(horizontal: 70.w),
                   child: CustomButton(
                     text: Strings.enter.tr,
-                    onPressed: () => Get.offNamed(Routes.BASE),
+                    onPressed: () => Get.toNamed(Routes.TYPEOFLOGIN),
                     fontSize: 16.sp,
                     verticalPadding: 16.h,
                     hasShadow: false,
