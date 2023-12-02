@@ -18,6 +18,7 @@ class AiAssistantsView extends GetView<AiAssistantsController> {
     return Scaffold(
       appBar: const CustomAppBar(
         title: "AI Assistants",
+        hasDrawer: false,
       ),
       body: Column(
         children: [
