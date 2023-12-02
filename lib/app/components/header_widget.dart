@@ -29,6 +29,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
           fontWeight: FontWeight.normal,
         ),
       ),
+      automaticallyImplyLeading: false,
       leading: hasDrawer
           ? IconButton(
               icon: const Icon(Icons.menu),
@@ -38,7 +39,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
               },
             )
           : null,
-      centerTitle: true,
+      centerTitle: false,
       backgroundColor: Get.theme.scaffoldBackgroundColor,
       actions: _buildActionIcons(),
     );
