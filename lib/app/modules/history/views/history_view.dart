@@ -92,18 +92,17 @@ class ChatSearchDelegate extends SearchDelegate<String> {
   bool _isSearching = false;
   ChatSearchDelegate(this.controller);
 
-  @override
-  ThemeData appBarTheme(BuildContext context) {
+  appBar(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    return theme.copyWith(
-      inputDecorationTheme: InputDecorationTheme(
-        hintStyle: theme.textTheme.bodyLarge?.copyWith(
-          fontSize: 16.sp,
-          fontWeight: FontWeight.normal,
-        ),
-        border: InputBorder.none,
-        isDense: true,
+    InputDecorationTheme(
+      hintStyle: theme.textTheme.bodyLarge?.copyWith(
+        fontSize: 16.sp,
+        fontWeight: FontWeight.normal,
       ),
+      filled: true,
+      fillColor: theme.scaffoldBackgroundColor,
+      border: InputBorder.none,
+      isDense: true,
     );
   }
 
