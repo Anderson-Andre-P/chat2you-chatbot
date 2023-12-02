@@ -6,7 +6,7 @@ class SignupController extends GetxController {
   late TextEditingController emailController;
   late TextEditingController passwordController;
   late TextEditingController confirmPasswordController;
-  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formKeySignUp = GlobalKey<FormState>();
 
   @override
   void onInit() {

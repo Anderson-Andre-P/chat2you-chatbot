@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class SigninController extends GetxController {
   late TextEditingController emailController;
   late TextEditingController passwordController;
-  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formKeySignIn = GlobalKey<FormState>();
 
   @override
   void onInit() {

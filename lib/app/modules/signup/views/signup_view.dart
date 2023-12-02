@@ -25,15 +25,14 @@ class SignupView extends GetView<SignupController> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 24.0.h),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Form(
-              key: controller.formKey,
+              key: controller.formKeySignUp,
               child: Column(
                 children: [
-                  // 52.verticalSpace,
                   CustomTextField(
                     label: "Nome de usuário",
                     prefixIcon: Icons.person,
@@ -53,7 +52,8 @@ class SignupView extends GetView<SignupController> {
                   CustomTextField(
                     label: Strings.password.tr,
                     prefixIcon: Icons.password,
-                    keyboardType: TextInputType.emailAddress,
+                    keyboardType: TextInputType.text,
+                    isPassword: true,
                     controller: controller.passwordController,
                     validator: controller.validatePassword,
                   ),
@@ -61,7 +61,8 @@ class SignupView extends GetView<SignupController> {
                   CustomTextField(
                     label: Strings.password.tr,
                     prefixIcon: Icons.password,
-                    keyboardType: TextInputType.emailAddress,
+                    keyboardType: TextInputType.text,
+                    isPassword: true,
                     controller: controller.confirmPasswordController,
                     validator: controller.validateConfirmPassword,
                   ),
@@ -74,7 +75,7 @@ class SignupView extends GetView<SignupController> {
                   text: Strings.enter.tr,
                   hasShadow: false,
                   onPressed: () {
-                    if (controller.formKey.currentState!.validate()) {
+                    if (controller.formKeySignUp.currentState!.validate()) {
                       // Chame a função para criar a conta aqui
                       // Por exemplo, controller.createAccount()
                       Get.toNamed(Routes.BASE);

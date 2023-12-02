@@ -27,10 +27,9 @@ class _SigninViewState extends State<SigninView> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = context.theme;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.symmetric(horizontal: 24.0.w),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +37,7 @@ class _SigninViewState extends State<SigninView> {
               48.verticalSpace,
               const CustomLoginHeader(),
               Form(
-                key: controller.formKey,
+                key: controller.formKeySignIn,
                 child: Column(
                   children: [
                     CustomTextField(
@@ -52,7 +51,8 @@ class _SigninViewState extends State<SigninView> {
                     CustomTextField(
                       label: Strings.password.tr,
                       prefixIcon: Icons.password,
-                      keyboardType: TextInputType.emailAddress,
+                      keyboardType: TextInputType.text,
+                      isPassword: true,
                       controller: controller.passwordController,
                       validator: controller.validatePassword,
                     ),
@@ -109,7 +109,7 @@ class _SigninViewState extends State<SigninView> {
                 text: Strings.enter.tr,
                 hasShadow: false,
                 onPressed: () {
-                  if (controller.formKey.currentState!.validate()) {
+                  if (controller.formKeySignIn.currentState!.validate()) {
                     Get.toNamed(Routes.BASE);
                   } else {
                     CustomSnackBar.showCustomErrorSnackBar(

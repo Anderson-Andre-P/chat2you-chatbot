@@ -40,7 +40,7 @@ class _OnboardingViewState extends State<OnboardingView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.symmetric(horizontal: 0.w, vertical: 0.h),
         child: Stack(
           children: [
             PageView.builder(
@@ -60,26 +60,32 @@ class _OnboardingViewState extends State<OnboardingView> {
               },
             ),
             Positioned(
-              bottom: 0,
+              bottom: 24,
               left: 0,
               right: 0,
-              child: CustomButton(
-                text: Strings.skipOnboarding.tr,
-                hasShadow: false,
-                onPressed: () {
-                  Get.offNamed(Routes.TYPEOFLOGIN);
-                },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.0.w),
+                child: CustomButton(
+                  text: Strings.skipOnboarding.tr,
+                  hasShadow: false,
+                  onPressed: () {
+                    Get.offNamed(Routes.TYPEOFLOGIN);
+                  },
+                ),
               ),
             ),
             Positioned(
-              bottom: 64,
+              bottom: 88,
               left: 0,
               right: 0,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(
-                  _pages.length,
-                  (index) => buildIndicator(index),
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.0.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                    _pages.length,
+                    (index) => buildIndicator(index),
+                  ),
                 ),
               ),
             ),
@@ -91,32 +97,35 @@ class _OnboardingViewState extends State<OnboardingView> {
 
   Widget buildPage(String onboardingImage, String onboardingTitle,
       String onboardingSubtitle) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(
-          onboardingImage,
-        ),
-        16.verticalSpace,
-        Text(
-          onboardingTitle,
-          textAlign: TextAlign.center,
-          style: Get.theme.textTheme.displayLarge?.copyWith(
-            fontSize: 33.sp,
-            fontWeight: FontWeight.normal,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            onboardingImage,
           ),
-        ),
-        16.verticalSpace,
-        Text(
-          onboardingSubtitle,
-          textAlign: TextAlign.center,
-          style: Get.theme.textTheme.displaySmall?.copyWith(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.normal,
+          16.verticalSpace,
+          Text(
+            onboardingTitle,
+            textAlign: TextAlign.center,
+            style: Get.theme.textTheme.displayLarge?.copyWith(
+              fontSize: 33.sp,
+              fontWeight: FontWeight.normal,
+            ),
           ),
-        ),
-        96.verticalSpace,
-      ],
+          16.verticalSpace,
+          Text(
+            onboardingSubtitle,
+            textAlign: TextAlign.center,
+            style: Get.theme.textTheme.displaySmall?.copyWith(
+              fontSize: 16.sp,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          96.verticalSpace,
+        ],
+      ),
     );
   }
 
