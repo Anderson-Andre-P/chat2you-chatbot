@@ -65,22 +65,27 @@ class SettingsItem {
   });
 }
 
-class SettingsItemWidget extends StatelessWidget {
+class SettingsItemWidget extends StatefulWidget {
   final SettingsItem item;
 
   const SettingsItemWidget({required this.item, super.key});
 
+  @override
+  State<SettingsItemWidget> createState() => _SettingsItemWidgetState();
+}
+
+class _SettingsItemWidgetState extends State<SettingsItemWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         ListTile(
           leading: Icon(
-            item.icon,
+            widget.item.icon,
             size: 24,
           ),
           title: Text(
-            item.phrase,
+            widget.item.phrase,
             style: Get.theme.textTheme.bodyMedium?.copyWith(
               fontSize: 16.sp,
               // height: 1.15,
@@ -91,11 +96,11 @@ class SettingsItemWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(0.r),
           ),
           trailing: Icon(
-            item.arrowIcon,
+            widget.item.arrowIcon,
             size: 20,
           ),
           dense: true,
-          onTap: item.onPressed,
+          onTap: widget.item.onPressed,
         ),
         const Divider(),
       ],
@@ -103,11 +108,16 @@ class SettingsItemWidget extends StatelessWidget {
   }
 }
 
-class ToggleSettingsItem extends StatelessWidget {
+class ToggleSettingsItem extends StatefulWidget {
   final SettingsItem item;
 
   const ToggleSettingsItem({required this.item, super.key});
 
+  @override
+  State<ToggleSettingsItem> createState() => _ToggleSettingsItemState();
+}
+
+class _ToggleSettingsItemState extends State<ToggleSettingsItem> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -117,7 +127,7 @@ class ToggleSettingsItem extends StatelessWidget {
           builder: (controller) {
             return ListTile(
               leading: Icon(
-                item.icon,
+                widget.item.icon,
                 size: 24,
               ),
               tileColor: Get.theme.scaffoldBackgroundColor,
@@ -125,18 +135,18 @@ class ToggleSettingsItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(0.r),
               ),
               title: SwitchListTile(
+                onChanged: controller.changeTheme,
+                value: !controller.isLightTheme,
+                activeColor: Get.theme.primaryColor,
                 dense: true,
                 contentPadding: EdgeInsets.all(0.w),
                 tileColor: Get.theme.scaffoldBackgroundColor,
                 title: Text(
-                  item.phrase,
+                  widget.item.phrase,
                   style: Get.theme.textTheme.bodyMedium?.copyWith(
                     fontSize: 16.sp,
                   ),
                 ),
-                value: !controller.isLightTheme,
-                onChanged: controller.changeTheme,
-                activeColor: Get.theme.primaryColor,
               ),
             );
           },
