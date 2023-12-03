@@ -89,13 +89,13 @@ class AiAssistantsView extends GetView<AiAssistantsController> {
                         ),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0.w),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: EdgeInsets.all(8.0.w),
                               decoration: BoxDecoration(
                                 color: assistant.color,
                                 borderRadius: BorderRadius.all(

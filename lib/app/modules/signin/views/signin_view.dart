@@ -67,8 +67,8 @@ class _SigninViewState extends State<SigninView> {
                     style: ButtonStyle(
                       visualDensity: VisualDensity.compact,
                       padding: MaterialStateProperty.all(
-                        const EdgeInsets.all(
-                          8,
+                        EdgeInsets.all(
+                          8.w,
                         ),
                       ),
                       backgroundColor: MaterialStateProperty.all(

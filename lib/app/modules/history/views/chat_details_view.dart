@@ -58,7 +58,7 @@ class MessageBubble extends StatelessWidget {
           left: 24.0.w,
           right: 24.0.w,
         ),
-        padding: const EdgeInsets.all(8),
+        padding: EdgeInsets.all(8.w),
         width: 320.w,
         decoration: BoxDecoration(
           color: sender == "you" ? theme.primaryColor : theme.cardColor,
@@ -89,7 +89,7 @@ class ChatInput extends StatelessWidget {
 
     // Adicione aqui o código para a entrada de mensagens (se necessário)
     return Container(
-      margin: const EdgeInsets.all(24.0),
+      margin: EdgeInsets.all(24.0.w),
       child: Row(
         children: [
           Expanded(

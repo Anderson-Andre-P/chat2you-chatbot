@@ -17,7 +17,7 @@ class TypeofloginView extends GetView<TypeofloginController> {
     final theme = context.theme;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.all(24.0.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

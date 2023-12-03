@@ -159,7 +159,7 @@ class ChatSearchDelegate extends SearchDelegate<String> {
 
     if (controller.filteredChats.isEmpty) {
       return Container(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.all(24.0.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
