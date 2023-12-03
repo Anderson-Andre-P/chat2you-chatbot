@@ -18,7 +18,7 @@ class SignupView extends GetView<SignupController> {
       appBar: AppBar(
         title: const Text('Criar Conta'),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back_outlined),
           onPressed: () {
             Get.toNamed(Routes.SIGNIN);
           },
@@ -35,7 +35,7 @@ class SignupView extends GetView<SignupController> {
                 children: [
                   CustomTextField(
                     label: "Nome de usuário",
-                    prefixIcon: Icons.person,
+                    prefixIcon: Icons.person_outlined,
                     keyboardType: TextInputType.name,
                     controller: controller.usernameController,
                     validator: controller.validateUsername,
@@ -43,7 +43,7 @@ class SignupView extends GetView<SignupController> {
                   16.verticalSpace,
                   CustomTextField(
                     label: Strings.email.tr,
-                    prefixIcon: Icons.email,
+                    prefixIcon: Icons.email_outlined,
                     keyboardType: TextInputType.emailAddress,
                     controller: controller.emailController,
                     validator: controller.validateEmail,
@@ -51,7 +51,7 @@ class SignupView extends GetView<SignupController> {
                   16.verticalSpace,
                   CustomTextField(
                     label: Strings.password.tr,
-                    prefixIcon: Icons.password,
+                    prefixIcon: Icons.password_outlined,
                     keyboardType: TextInputType.text,
                     isPassword: true,
                     controller: controller.passwordController,
@@ -60,7 +60,7 @@ class SignupView extends GetView<SignupController> {
                   16.verticalSpace,
                   CustomTextField(
                     label: Strings.password.tr,
-                    prefixIcon: Icons.password,
+                    prefixIcon: Icons.password_outlined,
                     keyboardType: TextInputType.text,
                     isPassword: true,
                     controller: controller.confirmPasswordController,

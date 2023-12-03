@@ -42,7 +42,7 @@ class _SigninViewState extends State<SigninView> {
                   children: [
                     CustomTextField(
                       label: Strings.email.tr,
-                      prefixIcon: Icons.email,
+                      prefixIcon: Icons.email_outlined,
                       keyboardType: TextInputType.emailAddress,
                       controller: controller.emailController,
                       validator: controller.validateEmail,
@@ -50,7 +50,7 @@ class _SigninViewState extends State<SigninView> {
                     16.verticalSpace,
                     CustomTextField(
                       label: Strings.password.tr,
-                      prefixIcon: Icons.password,
+                      prefixIcon: Icons.password_outlined,
                       keyboardType: TextInputType.text,
                       isPassword: true,
                       controller: controller.passwordController,

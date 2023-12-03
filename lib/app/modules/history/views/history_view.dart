@@ -20,7 +20,7 @@ class HistoryView extends GetView<HistoryController> {
       appBar: CustomAppBar(
         title: "Chat History",
         hasDrawer: false,
-        actionIcons: const [Icons.search, Icons.delete],
+        actionIcons: const [Icons.search_outlined, Icons.delete_outlined],
         onIconPressed: [
           () {
             showSearch(
@@ -64,7 +64,7 @@ class HistoryView extends GetView<HistoryController> {
                   dense: true,
                   tileColor: theme.cardColor,
                   trailing: const Icon(
-                    Icons.arrow_forward_ios_rounded,
+                    Icons.arrow_forward_outlined,
                     size: 14,
                   ),
                   onTap: () {
@@ -110,7 +110,7 @@ class ChatSearchDelegate extends SearchDelegate<String> {
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
-        icon: const Icon(Icons.clear),
+        icon: const Icon(Icons.clear_outlined),
         onPressed: () {
           query = '';
         },
@@ -121,7 +121,7 @@ class ChatSearchDelegate extends SearchDelegate<String> {
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
-      icon: const Icon(Icons.arrow_back),
+      icon: const Icon(Icons.arrow_back_outlined),
       onPressed: () {
         _isSearching = false;
         controller.filterChats('');
@@ -222,7 +222,7 @@ class ChatSearchDelegate extends SearchDelegate<String> {
             dense: true,
             tileColor: theme.cardColor,
             trailing: const Icon(
-              Icons.arrow_forward_ios_rounded,
+              Icons.arrow_forward_outlined,
               size: 14,
             ),
             onTap: () {

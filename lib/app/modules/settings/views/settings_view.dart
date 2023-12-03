@@ -32,7 +32,7 @@ class SettingsView extends GetView<SettingsController> {
               UserSettingsItem(
                 name: Strings.name.tr,
                 email: Strings.emailAddres.tr,
-                icon: Icons.chevron_right,
+                icon: Icons.arrow_forward_outlined,
                 onPressed: () {
                   // Navegação para a nova página desejada
                 },
@@ -42,7 +42,7 @@ class SettingsView extends GetView<SettingsController> {
                 imagePath: Constants.starToBanner,
                 title: Strings.titleBanner.tr,
                 subtitle: Strings.subtitleBanner.tr,
-                icon: Icons.chevron_right,
+                icon: Icons.arrow_forward_outlined,
                 onPressed: () {
                   null;
                 },
@@ -54,7 +54,7 @@ class SettingsView extends GetView<SettingsController> {
                   SettingsItem(
                     icon: Icons.person_outline,
                     phrase: 'Personal info',
-                    arrowIcon: Icons.arrow_forward,
+                    arrowIcon: Icons.arrow_forward_outlined,
                     onPressed: () {},
                   ),
                   SettingsItem(
@@ -68,7 +68,7 @@ class SettingsView extends GetView<SettingsController> {
                   SettingsItem(
                     icon: Icons.translate_outlined,
                     phrase: Strings.changeLanguage.tr,
-                    arrowIcon: Icons.chevron_right,
+                    arrowIcon: Icons.arrow_forward_outlined,
                     onPressed: () {
                       LocalizationService.updateLanguage(
                         LocalizationService.getCurrentLocal().languageCode ==

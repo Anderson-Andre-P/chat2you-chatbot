@@ -23,7 +23,7 @@ class HomeView extends GetView<HomeController> {
       appBar: CustomAppBar(
         title: Strings.titleOfTheApp.tr,
         hasDrawer: true,
-        actionIcons: const [Icons.notifications],
+        actionIcons: const [Icons.notifications_outlined],
         onIconPressed: [
           () {
             Scaffold.of(context).openDrawer();
@@ -172,13 +172,13 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: const Icon(Icons.person),
+            leading: const Icon(Icons.person_outlined),
             title: Text(Strings.profile.tr),
             tileColor: Get.theme.scaffoldBackgroundColor,
             onTap: () => Get.toNamed(Routes.PROFILE),
           ),
           ListTile(
-            leading: const Icon(Icons.settings),
+            leading: const Icon(Icons.settings_outlined),
             title: Text(Strings.settings.tr),
             tileColor: Get.theme.scaffoldBackgroundColor,
             onTap: () => Get.to(() => const SettingsView()),

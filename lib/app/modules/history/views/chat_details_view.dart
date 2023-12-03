@@ -123,7 +123,7 @@ class ChatInput extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(50.r)),
             ),
             child: IconButton(
-              icon: const Icon(Icons.send),
+              icon: const Icon(Icons.send_outlined),
               color: Colors.white,
               onPressed: () {
                 // Adicione aqui a lógica para enviar mensagens

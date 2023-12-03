@@ -25,7 +25,7 @@ class UserSettingsItem extends StatelessWidget {
             radius: 30,
             backgroundColor: Get.theme.colorScheme.background,
             child: const Icon(
-              Icons.person,
+              Icons.person_outlined,
               size: 48,
             ),
           ),

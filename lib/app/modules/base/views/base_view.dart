@@ -60,15 +60,15 @@ class BaseView extends GetView<BaseController> {
               items: [
                 _mBottomNavItem(
                   label: Strings.chat.tr,
-                  icon: Icons.home,
+                  icon: Icons.home_outlined,
                 ),
                 _mBottomNavItem(
                   label: Strings.aiAssistants.tr,
-                  icon: Icons.grid_view,
+                  icon: Icons.grid_view_outlined,
                 ),
                 _mBottomNavItem(
                   label: Strings.history.tr,
-                  icon: Icons.history,
+                  icon: Icons.history_outlined,
                 ),
               ],
               onTap: controller.changeScreen,
