@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../../../../config/theme/dark_theme_colors.dart';
+import '../../../../../config/theme/light_theme_colors.dart';
 import '../../controllers/settings_controller.dart';
 
 class SettingsList extends StatelessWidget {
@@ -49,14 +51,19 @@ class SettingsList extends StatelessWidget {
 
 class SettingsItem {
   final IconData icon;
+
   final String phrase;
   final IconData arrowIcon;
   final bool isToggle;
   final VoidCallback? onPressed;
   final ValueChanged<bool>? onToggle;
+  final Color? iconColor;
+  final Color? phraseColor;
 
   SettingsItem({
     required this.icon,
+    this.iconColor,
+    this.phraseColor,
     required this.phrase,
     required this.arrowIcon,
     this.isToggle = false,
@@ -83,13 +90,21 @@ class _SettingsItemWidgetState extends State<SettingsItemWidget> {
           leading: Icon(
             widget.item.icon,
             size: 24,
+            color: widget.item.iconColor ??
+                (Theme.of(context).brightness == Brightness.light
+                    ? LightThemeColors.iconColor
+                    : DarkThemeColors.iconColor),
           ),
           title: Text(
             widget.item.phrase,
             style: Get.theme.textTheme.bodyMedium?.copyWith(
-              fontSize: 16.sp,
-              // height: 1.15,
-            ),
+                fontSize: 16.sp,
+                color: widget.item.phraseColor ??
+                    (Theme.of(context).brightness == Brightness.light
+                        ? LightThemeColors.bodyTextColor
+                        : DarkThemeColors.bodyTextColor)
+                // height: 1.15,
+                ),
           ),
           tileColor: Get.theme.scaffoldBackgroundColor,
           shape: RoundedRectangleBorder(
@@ -98,6 +113,10 @@ class _SettingsItemWidgetState extends State<SettingsItemWidget> {
           trailing: Icon(
             widget.item.arrowIcon,
             size: 20,
+            color: widget.item.iconColor ??
+                (Theme.of(context).brightness == Brightness.light
+                    ? LightThemeColors.iconColor
+                    : DarkThemeColors.iconColor),
           ),
           dense: true,
           onTap: widget.item.onPressed,

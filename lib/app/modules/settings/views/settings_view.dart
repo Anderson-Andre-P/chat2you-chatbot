@@ -117,6 +117,16 @@ class SettingsView extends GetView<SettingsController> {
                       // Navegação para a nova página desejada
                     },
                   ),
+                  SettingsItem(
+                    icon: Icons.logout_outlined,
+                    iconColor: Colors.red,
+                    phraseColor: Colors.red,
+                    phrase: 'Logout',
+                    arrowIcon: Icons.arrow_forward,
+                    onPressed: () {
+                      // Navegação para a nova página desejada
+                    },
+                  ),
                 ],
               ),
             ],
