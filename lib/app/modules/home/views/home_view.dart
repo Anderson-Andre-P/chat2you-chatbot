@@ -8,6 +8,7 @@ import '../../../../utils/constants.dart';
 import '../../../components/custom_image_view.dart';
 import '../../../components/header_widget.dart';
 import '../../../routes/app_pages.dart';
+import '../../settings/views/settings_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -180,7 +181,7 @@ class CustomDrawer extends StatelessWidget {
             leading: const Icon(Icons.settings),
             title: Text(Strings.settings.tr),
             tileColor: Get.theme.scaffoldBackgroundColor,
-            onTap: () => Get.toNamed(Routes.CONFIG),
+            onTap: () => Get.to(() => const SettingsView()),
           ),
         ],
       ),
