@@ -57,6 +57,7 @@ class BaseView extends GetView<BaseController> {
               showSelectedLabels: true,
               showUnselectedLabels: true,
               selectedFontSize: 12.sp,
+              selectedItemColor: theme.primaryColor,
               items: [
                 _mBottomNavItem(
                   label: Strings.chat.tr,
