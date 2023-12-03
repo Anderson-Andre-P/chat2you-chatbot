@@ -66,7 +66,7 @@ const Map<String, String> ptBr = {
   Strings.advancedAssitance: 'Assistência',
   Strings.accessToExclusiveContent: 'Conteúdo exclusivo',
   Strings.prioritySupport: 'Suporte prioritário',
-  Strings.customizingAutomaticReplies: 'Personalização de conversas',
+  Strings.customizingAutomaticReplies: 'Customização de chat',
   Strings.detailedAnalysis: 'Análise detalhada',
   Strings.offlineAccess: 'Acesso offline',
   Strings.integrationWithSocialNetworks: 'Integração c/ mídias',
