@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import '../../../../config/theme/my_theme.dart';
 import '../../../../config/translations/localization_service.dart';
 import '../../../components/custom_banner.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/settings_controller.dart';
 import 'widgets/user_settings.dart';
 
@@ -22,7 +23,6 @@ class SettingsView extends GetView<SettingsController> {
       appBar: CustomAppBar(
         title: Strings.settings.tr,
         hasDrawer: false,
-        hasLeading: true,
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
@@ -34,7 +34,7 @@ class SettingsView extends GetView<SettingsController> {
                 email: Strings.emailAddres.tr,
                 icon: Icons.arrow_forward_outlined,
                 onPressed: () {
-                  // Navegação para a nova página desejada
+                  Get.offNamed(Routes.PROFILE);
                 },
               ),
               16.verticalSpace,
@@ -44,7 +44,7 @@ class SettingsView extends GetView<SettingsController> {
                 subtitle: Strings.subtitleBanner.tr,
                 icon: Icons.arrow_forward_outlined,
                 onPressed: () {
-                  null;
+                  Get.offNamed(Routes.UPGRADETOPRO);
                 },
               ),
               16.verticalSpace,

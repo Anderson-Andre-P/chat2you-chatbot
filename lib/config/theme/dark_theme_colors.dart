@@ -8,7 +8,8 @@ class DarkThemeColors {
   static const Color secondaryChatTypographyColor = Color(0xFFFFFFFF);
 
   // SECONDARY
-  static Color accentColor = const Color(0xFF1D5BD6);
+  // static Color accentColor = const Color.fromARGB(255, 214, 202, 29);
+  static const Color accentColor = Color(0XFFf8a319);
 
   //Appbar
   static const Color appbarColor = Colors.black;

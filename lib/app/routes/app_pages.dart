@@ -22,6 +22,8 @@ import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 import '../modules/typeoflogin/bindings/typeoflogin_binding.dart';
 import '../modules/typeoflogin/views/typeoflogin_view.dart';
+import '../modules/upgradetopro/bindings/upgradetopro_binding.dart';
+import '../modules/upgradetopro/views/upgradetopro_view.dart';
 
 part 'app_routes.dart';
 
@@ -92,6 +94,11 @@ class AppPages {
       name: _Paths.SIGNUP,
       page: () => const SignupView(),
       binding: SignupBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPGRADETOPRO,
+      page: () => const UpgradetoproView(),
+      binding: UpgradetoproBinding(),
     ),
   ];
 }

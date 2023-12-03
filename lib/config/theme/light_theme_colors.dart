@@ -8,7 +8,8 @@ class LightThemeColors {
   static const Color secondaryChatTypographyColor = Color(0xFF6c6c6c);
 
   // SECONDARY COLOR
-  static const Color accentColor = Color(0xFF1D5BD6);
+  // static const Color accentColor = Color(0xFF1D5BD6);
+  static const Color accentColor = Color(0XFFf8a319);
 
   // APPBAR
   static const Color appBarColor = primaryColor;

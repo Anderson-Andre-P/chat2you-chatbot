@@ -62,6 +62,15 @@ const Map<String, String> ptBr = {
   Strings.titleBanner: 'Atualize para PRO!',
   Strings.subtitleBanner: 'Aproveite todos os benefícios sem restrições',
 
+  // Versão GoPro
+  Strings.advancedAssitance: 'Assistência',
+  Strings.accessToExclusiveContent: 'Conteúdo exclusivo',
+  Strings.prioritySupport: 'Suporte prioritário',
+  Strings.customizingAutomaticReplies: 'Personalização de conversas',
+  Strings.detailedAnalysis: 'Análise detalhada',
+  Strings.offlineAccess: 'Acesso offline',
+  Strings.integrationWithSocialNetworks: 'Integração c/ mídias',
+
   // Tela inicial sem bate-papos
   Strings.welcomeTitle: "Bem-vindo ao chat2you 👋",
   Strings.welcomeSubtitle:

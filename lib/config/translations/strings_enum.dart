@@ -64,6 +64,15 @@ class Strings {
   static const String profile = 'Profile';
   static const String settings = 'Settings';
 
+  // GoPro Version
+  static const String advancedAssitance = 'Advanced';
+  static const String accessToExclusiveContent = 'Exclusive content';
+  static const String prioritySupport = 'Priority Support';
+  static const String customizingAutomaticReplies = 'Customizing Chat';
+  static const String detailedAnalysis = 'Detailed Analysis';
+  static const String offlineAccess = 'Offline Access';
+  static const String integrationWithSocialNetworks = 'Integrations w/ medias';
+
   //  Banner GoPro
   static const String titleBanner = 'Upgrade to PRO!';
   static const String subtitleBanner =

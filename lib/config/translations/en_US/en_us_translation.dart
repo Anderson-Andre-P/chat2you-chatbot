@@ -61,6 +61,15 @@ const Map<String, String> enUs = {
   Strings.titleBanner: 'Upgrade to PRO!',
   Strings.subtitleBanner: 'Enjoy all benefits without restrictions',
 
+  // GoPro Version
+  Strings.advancedAssitance: 'Assistance',
+  Strings.accessToExclusiveContent: 'Exclusive content',
+  Strings.prioritySupport: 'Priority Support',
+  Strings.customizingAutomaticReplies: 'Customized chat',
+  Strings.detailedAnalysis: 'Detailed Analysis',
+  Strings.offlineAccess: 'Offline Access',
+  Strings.integrationWithSocialNetworks: 'Integration w/ medias',
+
   // Home screen without chats
   Strings.welcomeTitle: "Welcome to chat2you 👋",
   Strings.welcomeSubtitle:

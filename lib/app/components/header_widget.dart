@@ -7,7 +7,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
   final bool hasDrawer;
   final List<IconData>? actionIcons;
   final List<VoidCallback>? onIconPressed;
-  final bool? hasLeading;
 
   const CustomAppBar({
     super.key,
@@ -15,7 +14,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
     this.actionIcons,
     this.onIconPressed,
     this.hasDrawer = false,
-    this.hasLeading,
   });
 
   @override
@@ -31,7 +29,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
           fontWeight: FontWeight.normal,
         ),
       ),
-      automaticallyImplyLeading: hasLeading ?? false,
       leading: hasDrawer
           ? IconButton(
               icon: const Icon(Icons.menu),
@@ -40,7 +37,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
                 Scaffold.of(context).openDrawer();
               },
             )
-          : null,
+          : IconButton(
+              icon: const Icon(Icons.arrow_back_outlined),
+              color: Get.theme.iconTheme.color,
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
       centerTitle: false,
       backgroundColor: Get.theme.scaffoldBackgroundColor,
       actions: _buildActionIcons(),

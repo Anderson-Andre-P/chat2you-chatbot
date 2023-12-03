@@ -94,6 +94,7 @@ class _SigninViewState extends State<SigninView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Checkbox(
+                    activeColor: Get.theme.primaryColor,
                     value: rememberMe,
                     onChanged: (value) {
                       setState(() {
