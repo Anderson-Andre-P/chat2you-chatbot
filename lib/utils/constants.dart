@@ -1,5 +1,5 @@
 class Constants {
-  // ENdpoint API
+  // Endpoint API
   static const baseUrl = 'http://172.17.0.1:8888';
   static const postMessage = '$baseUrl/send_message/';
   static const getMessages = '$baseUrl/get_messages/';
@@ -14,6 +14,9 @@ class Constants {
   static const appleLogo = 'assets/vectors/apple_logo.svg';
   static const facebookLogo = 'assets/vectors/facebook_logo.svg';
   static const googleLogo = 'assets/vectors/google_logo.svg';
+
+  // Banner
+  static const starToBanner = 'assets/images/Star_to_banner.png';
 
   // No Data
   static const noDataLight = 'assets/images/no_data_light.png';

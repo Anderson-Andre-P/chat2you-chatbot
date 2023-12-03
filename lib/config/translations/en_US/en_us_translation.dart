@@ -2,6 +2,11 @@ import '../strings_enum.dart';
 
 const Map<String, String> enUs = {
   Strings.hello: 'Hello!', // Only for tests
+
+  // User data
+  Strings.name: 'John Doe',
+  Strings.emailAddres: 'john.doe@domain.com.br',
+
   // Default
   Strings.loading: 'Loading',
   Strings.changeTheme: 'Change theme',
@@ -51,6 +56,10 @@ const Map<String, String> enUs = {
   Strings.history: 'History',
   Strings.profile: 'Profile',
   Strings.settings: 'Settings',
+
+  // Banner GoPro
+  Strings.titleBanner: 'Upgrade to PRO!',
+  Strings.subtitleBanner: 'Enjoy all benefits without restrictions',
 
   // Home screen without chats
   Strings.welcomeTitle: "Welcome to chat2you 👋",

@@ -3,6 +3,10 @@ import '../strings_enum.dart';
 const Map<String, String> ptBr = {
   Strings.hello: 'Olá!', // Apenas para testes
 
+  // Dados de usuário
+  Strings.name: 'John Doe',
+  Strings.emailAddres: 'john.doe@domain.com.br',
+
   // Padrão
   Strings.loading: 'Carregando',
   Strings.changeTheme: 'Mudar tema',
@@ -53,6 +57,10 @@ const Map<String, String> ptBr = {
   Strings.history: 'Histórico',
   Strings.profile: 'Perfil',
   Strings.settings: 'Configurações',
+
+  // Banner GoPro
+  Strings.titleBanner: 'Atualize para PRO!',
+  Strings.subtitleBanner: 'Aproveite todos os benefícios sem restrições',
 
   // Tela inicial sem bate-papos
   Strings.welcomeTitle: "Bem-vindo ao chat2you 👋",

@@ -1,5 +1,10 @@
 class Strings {
   static const String hello = 'Hello!'; // Only for tests
+
+  // User data
+  static const String name = 'John Doe';
+  static const String emailAddres = 'john.doe@domain.com.br';
+
   // Onboarding and Login
   static const String titleOfTheApp = 'Chat2You';
   static const String socialLoginFacebook = 'Continue with Facebook';
@@ -58,6 +63,11 @@ class Strings {
   static const String history = 'History';
   static const String profile = 'Profile';
   static const String settings = 'Settings';
+
+  //  Banner GoPro
+  static const String titleBanner = 'Upgrade to PRO!';
+  static const String subtitleBanner =
+      'Enjoy all benefits without restrictions';
 
   // Default
   static const String loading = 'loading';
