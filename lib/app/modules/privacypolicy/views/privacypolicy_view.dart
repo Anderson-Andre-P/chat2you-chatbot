@@ -35,16 +35,16 @@ class PrivacypolicyView extends GetView<PrivacypolicyController> {
                 ),
               ),
               24.verticalSpace,
-              PrivacyPolicyWidget(
+              _privacyItem(
                 theme: theme,
-                titleOfTerm: '1. Information We Collect',
-                descriptionOfTerm:
+                titleOfPrivacy: '1. Information We Collect',
+                descriptionOfPrivacy:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
               ),
-              PrivacyPolicyWidget(
+              _privacyItem(
                 theme: theme,
-                titleOfTerm: '2. How We Use Your Information',
-                descriptionOfTerm:
+                titleOfPrivacy: '2. How We Use Your Information',
+                descriptionOfPrivacy:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
               ),
             ],
@@ -55,38 +55,28 @@ class PrivacypolicyView extends GetView<PrivacypolicyController> {
   }
 }
 
-class PrivacyPolicyWidget extends StatelessWidget {
-  const PrivacyPolicyWidget({
-    super.key,
-    required this.theme,
-    required this.titleOfTerm,
-    required this.descriptionOfTerm,
-  });
-
-  final ThemeData theme;
-  final String titleOfTerm;
-  final String descriptionOfTerm;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          titleOfTerm,
-          style: theme.textTheme.bodyLarge?.copyWith(
-            fontWeight: FontWeight.w600,
-            fontSize: 18,
-          ),
+Widget _privacyItem({
+  required ThemeData theme,
+  required String titleOfPrivacy,
+  required String descriptionOfPrivacy,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        titleOfPrivacy,
+        style: theme.textTheme.bodyLarge?.copyWith(
+          fontWeight: FontWeight.w600,
+          fontSize: 18,
         ),
-        Text(
-          descriptionOfTerm,
-          style: theme.textTheme.bodyLarge?.copyWith(
-            fontWeight: FontWeight.normal,
-          ),
+      ),
+      Text(
+        descriptionOfPrivacy,
+        style: theme.textTheme.bodyLarge?.copyWith(
+          fontWeight: FontWeight.normal,
         ),
-        16.verticalSpace,
-      ],
-    );
-  }
+      ),
+      const SizedBox(height: 16),
+    ],
+  );
 }

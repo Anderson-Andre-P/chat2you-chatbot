@@ -41,19 +41,19 @@ class TermsView extends GetView<TermsController> {
               ),
             ),
             24.verticalSpace,
-            TermsWidget(
+            _termsItem(
               theme: theme,
               titleOfTerm: '1. Title of term',
               descriptionOfTerm:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
             ),
-            TermsWidget(
+            _termsItem(
               theme: theme,
               titleOfTerm: '2. Title of term',
               descriptionOfTerm:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
             ),
-            TermsWidget(
+            _termsItem(
               theme: theme,
               titleOfTerm: '3. Title of term',
               descriptionOfTerm:
@@ -66,38 +66,28 @@ class TermsView extends GetView<TermsController> {
   }
 }
 
-class TermsWidget extends StatelessWidget {
-  const TermsWidget({
-    super.key,
-    required this.theme,
-    required this.titleOfTerm,
-    required this.descriptionOfTerm,
-  });
-
-  final ThemeData theme;
-  final String titleOfTerm;
-  final String descriptionOfTerm;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          titleOfTerm,
-          style: theme.textTheme.bodyLarge?.copyWith(
-            fontWeight: FontWeight.w600,
-            fontSize: 18,
-          ),
+Widget _termsItem({
+  required ThemeData theme,
+  required String titleOfTerm,
+  required String descriptionOfTerm,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        titleOfTerm,
+        style: theme.textTheme.bodyLarge?.copyWith(
+          fontWeight: FontWeight.w600,
+          fontSize: 18,
         ),
-        Text(
-          descriptionOfTerm,
-          style: theme.textTheme.bodyLarge?.copyWith(
-            fontWeight: FontWeight.normal,
-          ),
+      ),
+      Text(
+        descriptionOfTerm,
+        style: theme.textTheme.bodyLarge?.copyWith(
+          fontWeight: FontWeight.normal,
         ),
-        16.verticalSpace,
-      ],
-    );
-  }
+      ),
+      const SizedBox(height: 16),
+    ],
+  );
 }
