@@ -84,6 +84,14 @@ const Map<String, String> ptBr = {
   Strings.titlePrivacyPolicy: "Nossa política de privacidade",
   Strings.infotmationPrivacyPolicy: "Última atualização [DATE]",
 
+  // Centro de ajuda
+  Strings.helpCenter: 'Centro de Ajuda',
+  Strings.titleHelpCenter: 'Bem-vindo à nossa Central de Ajuda',
+  Strings.informationHelpCenter:
+      'Se precisar de ajuda, verifique as perguntas frequentes abaixo. Se sua pergunta não for respondida, sinta-se à vontade para entrar em contato com nossa equipe de suporte.',
+  Strings.frequentlyAskedQuestions: 'Perguntas frequentes',
+  Strings.contactSupport: 'Entre em contato com o suporte',
+
   // Tela inicial sem bate-papos
   Strings.welcomeTitle: "Bem-vindo ao chat2you 👋",
   Strings.welcomeSubtitle:

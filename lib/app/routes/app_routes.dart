@@ -18,6 +18,7 @@ abstract class Routes {
   static const UPGRADETOPRO = _Paths.UPGRADETOPRO;
   static const TERMS = _Paths.TERMS;
   static const PRIVACYPOLICY = _Paths.PRIVACYPOLICY;
+  static const HELPCENTER = _Paths.HELPCENTER;
 }
 
 abstract class _Paths {
@@ -37,4 +38,5 @@ abstract class _Paths {
   static const UPGRADETOPRO = '/upgradetopro';
   static const TERMS = '/terms';
   static const PRIVACYPOLICY = '/privacypolicy';
+  static const HELPCENTER = '/helpcenter';
 }

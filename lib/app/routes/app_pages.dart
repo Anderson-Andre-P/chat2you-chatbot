@@ -4,6 +4,8 @@ import '../modules/ai assistants/bindings/ai_assistants_binding.dart';
 import '../modules/ai assistants/views/ai_assistants_view.dart';
 import '../modules/base/bindings/base_binding.dart';
 import '../modules/base/views/base_view.dart';
+import '../modules/helpcenter/bindings/helpcenter_binding.dart';
+import '../modules/helpcenter/views/helpcenter_view.dart';
 import '../modules/history/bindings/history_binding.dart';
 import '../modules/history/views/history_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -113,6 +115,11 @@ class AppPages {
       name: _Paths.PRIVACYPOLICY,
       page: () => const PrivacypolicyView(),
       binding: PrivacypolicyBinding(),
+    ),
+    GetPage(
+      name: _Paths.HELPCENTER,
+      page: () => const HelpcenterView(),
+      binding: HelpcenterBinding(),
     ),
   ];
 }

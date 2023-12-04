@@ -91,6 +91,14 @@ class Strings {
   static const String titlePrivacyPolicy = "Our Privacy Policy";
   static const String infotmationPrivacyPolicy = "Last update [DATE]";
 
+  // Help Center
+  static const String helpCenter = 'Help center';
+  static const String titleHelpCenter = 'Welcome to Our Help Center';
+  static const String informationHelpCenter =
+      'If you need assistance, please check the frequently asked questions below. If your question is not answered, feel free to contact our support team.';
+  static const String frequentlyAskedQuestions = 'Frequently Asked Questions';
+  static const String contactSupport = 'Contact Support';
+
   // Default
   static const String loading = 'loading';
   static const String changeTheme = 'change_theme';

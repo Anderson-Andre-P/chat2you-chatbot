@@ -98,7 +98,7 @@ class SettingsView extends GetView<SettingsController> {
                     phrase: 'Help center',
                     arrowIcon: Icons.arrow_forward,
                     onPressed: () {
-                      // Navegação para a nova página desejada
+                      Get.offNamed(Routes.HELPCENTER);
                     },
                   ),
                   SettingsItem(

@@ -83,6 +83,14 @@ const Map<String, String> enUs = {
   Strings.titlePrivacyPolicy: "Our Privacy Policy",
   Strings.infotmationPrivacyPolicy: "Last update [DATE]",
 
+  // Help Center
+  Strings.helpCenter: 'Help center',
+  Strings.titleHelpCenter: 'Welcome to Our Help Center',
+  Strings.informationHelpCenter:
+      'If you need assistance, please check the frequently asked questions below. If your question is not answered, feel free to contact our support team.',
+  Strings.frequentlyAskedQuestions: 'Frequently Asked Questions',
+  Strings.contactSupport: 'Contact Support',
+
   // Home screen without chats
   Strings.welcomeTitle: "Welcome to chat2you 👋",
   Strings.welcomeSubtitle:
