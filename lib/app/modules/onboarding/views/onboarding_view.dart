@@ -20,19 +20,19 @@ class _OnboardingViewState extends State<OnboardingView> {
 
   final List<Map<String, String>> _pages = [
     {
-      'onboardingImage': Constants.onboardingImageOne,
-      'onboardingTitle': Strings.onboardingTitleOne,
-      'onboardingSubtitle': Strings.onboardingSubtitleOne,
+      'onboardingImage': Constants.onboardingImageOne.tr,
+      'onboardingTitle': Strings.onboardingTitleOne.tr,
+      'onboardingSubtitle': Strings.onboardingSubtitleOne.tr,
     },
     {
-      'onboardingImage': Constants.onboardingImageTwo,
-      'onboardingTitle': Strings.onboardingTitleTwo,
-      'onboardingSubtitle': Strings.onboardingSubtitleTwo,
+      'onboardingImage': Constants.onboardingImageTwo.tr,
+      'onboardingTitle': Strings.onboardingTitleTwo.tr,
+      'onboardingSubtitle': Strings.onboardingSubtitleTwo.tr,
     },
     {
-      'onboardingImage': Constants.onboardingImageThree,
-      'onboardingTitle': Strings.onboardingTitleThree,
-      'onboardingSubtitle': Strings.onboardingSubtitleThree,
+      'onboardingImage': Constants.onboardingImageThree.tr,
+      'onboardingTitle': Strings.onboardingTitleThree.tr,
+      'onboardingSubtitle': Strings.onboardingSubtitleThree.tr,
     },
   ];
 

@@ -41,15 +41,15 @@ const Map<String, String> ptBr = {
 
   // Integração
   Strings.skipOnboarding: 'Pular introdução',
-  Strings.onboardingTitleOne: 'The best AI Chatbot app in this century',
-  Strings.onboardingTitleTwo: 'Try premium for your unlimited usage',
-  Strings.onboardingTitleThree: 'Various AI Assistants to help you more',
+  Strings.onboardingTitleOne: 'O melhor aplicativo AI Chatbot deste século',
+  Strings.onboardingTitleTwo: 'Experimente o premium para uso ilimitado',
+  Strings.onboardingTitleThree: 'Vários assistentes de IA para ajudá-lo mais',
   Strings.onboardingSubtitleOne:
-      'I\'m here to make your life easier and answer your questions',
+      'Estou aqui para facilitar sua vida e tirar suas dúvidas',
   Strings.onboardingSubtitleTwo:
-      'Premium plan gives you access to exclusive features',
+      'Nosso plano Premium dá acesso a recursos exclusivos',
   Strings.onboardingSubtitleThree:
-      'I\'m here to make your experience with us easier and more enjoyable',
+      'Estou aqui para tornar sua experiência conosco mais fácil e agradável',
 
   // BottomBar
   Strings.chat: 'Conversas',
@@ -70,6 +70,14 @@ const Map<String, String> ptBr = {
   Strings.detailedAnalysis: 'Análise detalhada',
   Strings.offlineAccess: 'Acesso offline',
   Strings.integrationWithSocialNetworks: 'Integração c/ mídias',
+
+  // Tela de configurações
+  Strings.general: 'Geral',
+  Strings.about: 'Sobre',
+  Strings.personalInfo: 'Informações pessoais',
+  Strings.security: 'Segurança',
+  Strings.toggleTheme: 'Alternar tema',
+  Strings.logout: 'Sair',
 
   // Termos e condições
   Strings.termsAndConditions: "Termos e condições",

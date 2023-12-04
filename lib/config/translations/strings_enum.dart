@@ -57,6 +57,14 @@ class Strings {
   static const String inputChat = 'Ask me anything...';
   static const String stopGenerating = 'Stop generating...';
 
+  // Settings Screen
+  static const String general = 'General';
+  static const String about = 'About';
+  static const String personalInfo = 'Personal info';
+  static const String security = 'Security';
+  static const String toggleTheme = 'Toggle theme';
+  static const String logout = 'Logout';
+
   // BottomBar
   static const String chat = 'Chat';
   static const String aiAssistants = 'AI Assistants';

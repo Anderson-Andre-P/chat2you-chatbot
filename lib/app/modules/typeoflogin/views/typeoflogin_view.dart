@@ -26,7 +26,7 @@ class TypeofloginView extends GetView<TypeofloginController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButton(
-                  text: Strings.socialLoginGoogle,
+                  text: Strings.socialLoginGoogle.tr,
                   backgroundColor: theme.cardColor,
                   borderColor: theme.highlightColor,
                   foregroundColor: theme.brightness == Brightness.dark
@@ -37,7 +37,7 @@ class TypeofloginView extends GetView<TypeofloginController> {
                 ),
                 8.verticalSpace,
                 CustomButton(
-                  text: Strings.socialLoginFacebook,
+                  text: Strings.socialLoginFacebook.tr,
                   backgroundColor: theme.cardColor,
                   borderColor: theme.highlightColor,
                   foregroundColor: theme.brightness == Brightness.dark
@@ -48,7 +48,7 @@ class TypeofloginView extends GetView<TypeofloginController> {
                 ),
                 8.verticalSpace,
                 CustomButton(
-                  text: Strings.socialLoginApple,
+                  text: Strings.socialLoginApple.tr,
                   backgroundColor: theme.cardColor,
                   borderColor: theme.highlightColor,
                   foregroundColor: theme.brightness == Brightness.dark
@@ -63,7 +63,7 @@ class TypeofloginView extends GetView<TypeofloginController> {
             const CustomDivider(),
             16.verticalSpace,
             CustomButton(
-              text: Strings.signInButton,
+              text: Strings.signInButton.tr,
               hasShadow: false,
               onPressed: () => Get.toNamed(Routes.SIGNIN),
             ),

@@ -70,6 +70,14 @@ const Map<String, String> enUs = {
   Strings.offlineAccess: 'Offline Access',
   Strings.integrationWithSocialNetworks: 'Integration w/ medias',
 
+  // Settings Screen
+  Strings.general: 'General',
+  Strings.about: 'About',
+  Strings.personalInfo: 'Personal info',
+  Strings.security: 'Security',
+  Strings.toggleTheme: 'Toggle theme',
+  Strings.logout: 'Logout',
+
   // Terms and conditions
   Strings.termsAndConditions: "Terms and conditions",
   Strings.titleTermsAndConditions: "Welcome to Our App",

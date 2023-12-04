@@ -49,17 +49,17 @@ class SettingsView extends GetView<SettingsController> {
               ),
               16.verticalSpace,
               SettingsList(
-                titleOfList: 'General',
+                titleOfList: Strings.general.tr,
                 items: [
                   SettingsItem(
                     icon: Icons.person_outline,
-                    phrase: 'Personal info',
+                    phrase: Strings.personalInfo.tr,
                     arrowIcon: Icons.arrow_forward_outlined,
                     onPressed: () {},
                   ),
                   SettingsItem(
                     icon: Icons.security_outlined,
-                    phrase: 'Security',
+                    phrase: Strings.security.tr,
                     arrowIcon: Icons.arrow_forward,
                     onPressed: () {
                       // Navegação para a nova página desejada
@@ -80,7 +80,7 @@ class SettingsView extends GetView<SettingsController> {
                   ),
                   SettingsItem(
                     icon: Icons.swap_horiz_outlined,
-                    phrase: 'Toggle Theme',
+                    phrase: Strings.toggleTheme.tr,
                     arrowIcon: Icons.arrow_forward,
                     isToggle: true,
                     onToggle: (value) {
@@ -91,11 +91,11 @@ class SettingsView extends GetView<SettingsController> {
               ),
               16.verticalSpace,
               SettingsList(
-                titleOfList: 'About',
+                titleOfList: Strings.about.tr,
                 items: [
                   SettingsItem(
                     icon: Icons.help_outline,
-                    phrase: 'Help center',
+                    phrase: Strings.helpCenter.tr,
                     arrowIcon: Icons.arrow_forward,
                     onPressed: () {
                       Get.offNamed(Routes.HELPCENTER);
@@ -103,7 +103,7 @@ class SettingsView extends GetView<SettingsController> {
                   ),
                   SettingsItem(
                     icon: Icons.lock_outline,
-                    phrase: 'Privacy policy',
+                    phrase: Strings.privacyPolicy.tr,
                     arrowIcon: Icons.arrow_forward,
                     onPressed: () {
                       Get.offNamed(Routes.PRIVACYPOLICY);
@@ -111,7 +111,7 @@ class SettingsView extends GetView<SettingsController> {
                   ),
                   SettingsItem(
                     icon: Icons.info_outline,
-                    phrase: 'Terms of Chat2You',
+                    phrase: Strings.termsAndConditions.tr,
                     arrowIcon: Icons.arrow_forward,
                     onPressed: () {
                       Get.offNamed(Routes.TERMS);
@@ -121,7 +121,7 @@ class SettingsView extends GetView<SettingsController> {
                     icon: Icons.logout_outlined,
                     iconColor: Colors.red,
                     phraseColor: Colors.red,
-                    phrase: 'Logout',
+                    phrase: Strings.logout.tr,
                     arrowIcon: Icons.arrow_forward,
                     onPressed: () {
                       // Navegação para a nova página desejada
