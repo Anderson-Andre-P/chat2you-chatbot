@@ -33,7 +33,7 @@ dependencies:
   flutter_animate: ^4.3.0
 
   flutter_svg: ^2.0.9
-
+  lottie: ^2.7.0
   cached_network_image: ^3.3.0
 
   flutter:
@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/images/
     - assets/vectors/
+    - assets/lottie/
     - assets/fonts/
 
   fonts:

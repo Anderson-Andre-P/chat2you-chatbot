@@ -4,6 +4,12 @@ class Constants {
   static const postMessage = '$baseUrl/send_message/';
   static const getMessages = '$baseUrl/get_messages/';
 
+  // Lottie animation
+  static const alertRed = 'assets/lottie/alertRed.json';
+  static const alertYellow = 'assets/lottie/alertYellow.json';
+  static const alertBlue = 'assets/lottie/alertBlue.json';
+  static const alertGreen = 'assets/lottie/alertGreen.json';
+
   // Onboarding
   static const onboardingImageOne = 'assets/images/onboardingImageOne.png';
   static const onboardingImageTwo = 'assets/images/onboardingImageTwo.png';

@@ -24,6 +24,14 @@ class Strings {
   static const String invalidCredentials =
       'Invalid credentials, please try again...';
 
+  // Alert
+  static const String warning = 'Warning!';
+  static const String info = 'Information!';
+  static const String success = 'Success!';
+  static const String alert = 'Alert!';
+  static const String okay = 'Okay!';
+  static const String cancel = 'Cancel';
+
   // Onboarding
   static const String skipOnboarding = 'Skip onboarding';
   static const String onboardingTitleOne =

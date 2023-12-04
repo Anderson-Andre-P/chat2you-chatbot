@@ -38,6 +38,14 @@ const Map<String, String> enUs = {
   Strings.error: 'Error!',
   Strings.invalidCredentials: 'Invalid credentials, please try again...',
 
+  // Alert
+  Strings.warning: 'Warning!',
+  Strings.info: 'Information!',
+  Strings.success: 'Success!',
+  Strings.alert: 'Alert!',
+  Strings.okay: 'Okay!',
+  Strings.cancel: 'Cancel',
+
   // Onboarding
   Strings.skipOnboarding: 'Skip onboarding',
   Strings.onboardingTitleOne: 'The best AI Chatbot app in this century',

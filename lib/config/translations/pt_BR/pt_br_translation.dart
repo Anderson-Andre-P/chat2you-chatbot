@@ -39,6 +39,14 @@ const Map<String, String> ptBr = {
   Strings.error: 'Erro!',
   Strings.invalidCredentials: 'Credenciais inválidas, tente novamente...',
 
+  // Alertas
+  Strings.warning: 'Aviso!',
+  Strings.info: 'Informação!',
+  Strings.success: 'Sucesso!',
+  Strings.alert: 'Alerta!',
+  Strings.okay: 'Tudo bem!',
+  Strings.cancel: 'Cancelar',
+
   // Integração
   Strings.skipOnboarding: 'Pular introdução',
   Strings.onboardingTitleOne: 'O melhor aplicativo AI Chatbot deste século',

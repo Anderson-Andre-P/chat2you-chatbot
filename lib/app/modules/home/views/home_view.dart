@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../../../../config/translations/strings_enum.dart';
 import '../../../../utils/constants.dart';
+import '../../../components/custom_alert_dialog.dart';
 import '../../../components/custom_image_view.dart';
 import '../../../components/header_widget.dart';
 import '../../../routes/app_pages.dart';
@@ -60,7 +61,22 @@ class HomeView extends GetView<HomeController> {
             CustomButton(
               text: Strings.startChatButton.tr,
               hasShadow: false,
-              onPressed: () {},
+              onPressed: () {
+                CustomAlertDialog(
+                  title: "Alert Title",
+                  content:
+                      "This is the alert content. This is the alert content. This is the alert content. This is the alert content.",
+                  onOkayPressed: () {
+                    // Lógica quando o botão Okay é pressionado
+                    print("Okay Pressed");
+                  },
+                  onCancelPressed: () {
+                    // Lógica quando o botão Cancel é pressionado
+                    print("Cancel Pressed");
+                  },
+                  type: AlertType.alert,
+                ).show(context);
+              },
             )
           ],
         ),
