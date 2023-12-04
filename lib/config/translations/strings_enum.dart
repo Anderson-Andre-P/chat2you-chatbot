@@ -86,6 +86,11 @@ class Strings {
   static const String informationTwoOfTermsAndConditions =
       "By using the app, you agree to be bound by these terms. If you do not agree to these terms, please do not use the app.";
 
+  // Privacy Policy
+  static const String privacyPolicy = "Privacy Policy";
+  static const String titlePrivacyPolicy = "Our Privacy Policy";
+  static const String infotmationPrivacyPolicy = "Last update [DATE]";
+
   // Default
   static const String loading = 'loading';
   static const String changeTheme = 'change_theme';

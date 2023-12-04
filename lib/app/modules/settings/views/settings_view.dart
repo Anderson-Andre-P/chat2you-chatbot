@@ -106,7 +106,7 @@ class SettingsView extends GetView<SettingsController> {
                     phrase: 'Privacy policy',
                     arrowIcon: Icons.arrow_forward,
                     onPressed: () {
-                      // Navegação para a nova página desejada
+                      Get.offNamed(Routes.PRIVACYPOLICY);
                     },
                   ),
                   SettingsItem(

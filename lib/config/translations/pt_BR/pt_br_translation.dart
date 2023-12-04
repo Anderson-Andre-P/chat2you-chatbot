@@ -79,6 +79,11 @@ const Map<String, String> ptBr = {
   Strings.informationTwoOfTermsAndConditions:
       "Ao usar o aplicativo, você concorda em obedecer a estes termos. Se não concordar com estes termos, não use o aplicativo.",
 
+  // Política de privacidade
+  Strings.privacyPolicy: "Política de privacidade",
+  Strings.titlePrivacyPolicy: "Nossa política de privacidade",
+  Strings.infotmationPrivacyPolicy: "Última atualização [DATE]",
+
   // Tela inicial sem bate-papos
   Strings.welcomeTitle: "Bem-vindo ao chat2you 👋",
   Strings.welcomeSubtitle:

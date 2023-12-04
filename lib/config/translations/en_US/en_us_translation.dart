@@ -78,6 +78,11 @@ const Map<String, String> enUs = {
   Strings.informationTwoOfTermsAndConditions:
       "By using the app, you agree to be bound by these terms. If you do not agree to these terms, please do not use the app.",
 
+  // Privacy Policy
+  Strings.privacyPolicy: "Privacy Policy",
+  Strings.titlePrivacyPolicy: "Our Privacy Policy",
+  Strings.infotmationPrivacyPolicy: "Last update [DATE]",
+
   // Home screen without chats
   Strings.welcomeTitle: "Welcome to chat2you 👋",
   Strings.welcomeSubtitle:
