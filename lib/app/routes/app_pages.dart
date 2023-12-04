@@ -20,6 +20,8 @@ import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/terms/bindings/terms_binding.dart';
+import '../modules/terms/views/terms_view.dart';
 import '../modules/typeoflogin/bindings/typeoflogin_binding.dart';
 import '../modules/typeoflogin/views/typeoflogin_view.dart';
 import '../modules/upgradetopro/bindings/upgradetopro_binding.dart';
@@ -99,6 +101,11 @@ class AppPages {
       name: _Paths.UPGRADETOPRO,
       page: () => const UpgradetoproView(),
       binding: UpgradetoproBinding(),
+    ),
+    GetPage(
+      name: _Paths.TERMS,
+      page: () => const TermsView(),
+      binding: TermsBinding(),
     ),
   ];
 }

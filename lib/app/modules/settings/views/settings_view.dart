@@ -111,10 +111,10 @@ class SettingsView extends GetView<SettingsController> {
                   ),
                   SettingsItem(
                     icon: Icons.info_outline,
-                    phrase: 'About Chat2You',
+                    phrase: 'Terms of Chat2You',
                     arrowIcon: Icons.arrow_forward,
                     onPressed: () {
-                      // Navegação para a nova página desejada
+                      Get.offNamed(Routes.TERMS);
                     },
                   ),
                   SettingsItem(

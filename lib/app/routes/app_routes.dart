@@ -16,6 +16,7 @@ abstract class Routes {
   static const TYPEOFLOGIN = _Paths.TYPEOFLOGIN;
   static const SIGNUP = _Paths.SIGNUP;
   static const UPGRADETOPRO = _Paths.UPGRADETOPRO;
+  static const TERMS = _Paths.TERMS;
 }
 
 abstract class _Paths {
@@ -33,4 +34,5 @@ abstract class _Paths {
   static const TYPEOFLOGIN = '/typeoflogin';
   static const SIGNUP = '/signup';
   static const UPGRADETOPRO = '/upgradetopro';
+  static const TERMS = '/terms';
 }

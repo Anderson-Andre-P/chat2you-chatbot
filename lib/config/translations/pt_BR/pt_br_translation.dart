@@ -71,6 +71,14 @@ const Map<String, String> ptBr = {
   Strings.offlineAccess: 'Acesso offline',
   Strings.integrationWithSocialNetworks: 'Integração c/ mídias',
 
+  // Termos e condições
+  Strings.termsAndConditions: "Termos e condições",
+  Strings.titleTermsAndConditions: "Bem-vindo ao nosso aplicativo",
+  Strings.informationOneOfTermsAndConditions:
+      "Por favor, leia estes termos e condições com atenção para usar nosso aplicativo.",
+  Strings.informationTwoOfTermsAndConditions:
+      "Ao usar o aplicativo, você concorda em obedecer a estes termos. Se não concordar com estes termos, não use o aplicativo.",
+
   // Tela inicial sem bate-papos
   Strings.welcomeTitle: "Bem-vindo ao chat2you 👋",
   Strings.welcomeSubtitle:

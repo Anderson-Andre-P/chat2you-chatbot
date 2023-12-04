@@ -78,6 +78,14 @@ class Strings {
   static const String subtitleBanner =
       'Enjoy all benefits without restrictions';
 
+  // Terms and conditions
+  static const String termsAndConditions = "Terms and conditions";
+  static const String titleTermsAndConditions = "Welcome to Our App";
+  static const String informationOneOfTermsAndConditions =
+      "Please read these terms and conditions carefully for using our app.";
+  static const String informationTwoOfTermsAndConditions =
+      "By using the app, you agree to be bound by these terms. If you do not agree to these terms, please do not use the app.";
+
   // Default
   static const String loading = 'loading';
   static const String changeTheme = 'change_theme';
