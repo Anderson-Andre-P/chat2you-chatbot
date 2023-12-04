@@ -148,6 +148,10 @@ class _ToggleSettingsItemState extends State<ToggleSettingsItem> {
               leading: Icon(
                 widget.item.icon,
                 size: 24,
+                color: widget.item.iconColor ??
+                    (Theme.of(context).brightness == Brightness.light
+                        ? LightThemeColors.iconColor
+                        : DarkThemeColors.iconColor),
               ),
               tileColor: Get.theme.scaffoldBackgroundColor,
               shape: RoundedRectangleBorder(
