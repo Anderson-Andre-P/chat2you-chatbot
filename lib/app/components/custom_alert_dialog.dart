@@ -60,7 +60,6 @@ class CustomAlertDialog extends StatelessWidget {
 
   Widget _buildAnimatedSvg() {
     String imgPath;
-    // Color backgroundColor;
 
     switch (type) {
       case AlertType.alert:
@@ -77,15 +76,11 @@ class CustomAlertDialog extends StatelessWidget {
         break;
     }
 
-    return Container(
-      // color: Colors.white,
-      padding: const EdgeInsets.all(0.0),
-      child: Lottie.asset(
-        imgPath,
-        width: 120.0,
-        height: 120.0,
-        fit: BoxFit.fill,
-      ),
+    return Lottie.asset(
+      imgPath,
+      width: 120.0,
+      height: 120.0,
+      fit: BoxFit.fill,
     );
   }
 
