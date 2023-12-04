@@ -2,6 +2,7 @@ import 'package:chat2you/utils/awesome_notifications_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 import 'app/data/local/my_hive.dart';
 import 'app/data/local/my_shared_pref.dart';
@@ -14,6 +15,10 @@ import 'utils/fcm_helper.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
+  OneSignal.initialize("ccfffe73-6ecc-45a3-90c4-3d50432d4dba");
+  OneSignal.Notifications.requestPermission(true);
 
   await MyHive.init(registerAdapters: (hive) {
     hive.registerAdapter(UserModelAdapter());
