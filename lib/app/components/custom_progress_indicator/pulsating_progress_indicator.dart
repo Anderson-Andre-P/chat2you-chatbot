@@ -24,6 +24,7 @@ class _PulsatingLoadingIndicatorState extends State<PulsatingLoadingIndicator>
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Center(
       child: ScaleTransition(
         scale: _animationController.drive(
@@ -33,7 +34,7 @@ class _PulsatingLoadingIndicatorState extends State<PulsatingLoadingIndicator>
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-            color: Get.theme.primaryColor,
+            color: theme.primaryColor,
             shape: BoxShape.circle,
           ),
         ),

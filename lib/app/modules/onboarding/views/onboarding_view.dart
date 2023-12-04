@@ -97,6 +97,7 @@ class _OnboardingViewState extends State<OnboardingView> {
 
   Widget buildPage(String onboardingImage, String onboardingTitle,
       String onboardingSubtitle) {
+    final theme = context.theme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       child: Column(
@@ -109,7 +110,7 @@ class _OnboardingViewState extends State<OnboardingView> {
           Text(
             onboardingTitle,
             textAlign: TextAlign.center,
-            style: Get.theme.textTheme.displayLarge?.copyWith(
+            style: theme.textTheme.displayLarge?.copyWith(
               fontSize: 33.sp,
               fontWeight: FontWeight.normal,
             ),
@@ -118,7 +119,7 @@ class _OnboardingViewState extends State<OnboardingView> {
           Text(
             onboardingSubtitle,
             textAlign: TextAlign.center,
-            style: Get.theme.textTheme.displaySmall?.copyWith(
+            style: theme.textTheme.displaySmall?.copyWith(
               fontSize: 16.sp,
               fontWeight: FontWeight.normal,
             ),
@@ -130,6 +131,7 @@ class _OnboardingViewState extends State<OnboardingView> {
   }
 
   Widget buildIndicator(int index) {
+    final theme = context.theme;
     return Container(
       width: index == _currentPage ? 10 : 20,
       height: 10,
@@ -137,8 +139,8 @@ class _OnboardingViewState extends State<OnboardingView> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.r)),
         color: index == _currentPage
-            ? Get.theme.primaryColor
-            : Get.theme.primaryColor.withOpacity(0.2),
+            ? theme.primaryColor
+            : theme.primaryColor.withOpacity(0.2),
       ),
     );
   }

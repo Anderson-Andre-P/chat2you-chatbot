@@ -21,10 +21,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return AppBar(
       title: Text(
         title,
-        style: Get.theme.textTheme.displayMedium?.copyWith(
+        style: theme.textTheme.displayMedium?.copyWith(
           fontSize: 23.sp,
           fontWeight: FontWeight.normal,
         ),
@@ -32,20 +33,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
       leading: hasDrawer
           ? IconButton(
               icon: const Icon(Icons.menu),
-              color: Get.theme.iconTheme.color,
+              color: theme.iconTheme.color,
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
             )
           : IconButton(
               icon: const Icon(Icons.arrow_back_outlined),
-              color: Get.theme.iconTheme.color,
+              color: theme.iconTheme.color,
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
       centerTitle: false,
-      backgroundColor: Get.theme.scaffoldBackgroundColor,
+      backgroundColor: theme.scaffoldBackgroundColor,
       actions: _buildActionIcons(),
     );
   }

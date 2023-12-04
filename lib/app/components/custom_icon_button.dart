@@ -34,6 +34,7 @@ class CustomIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Container(
       padding: hasShadow ? EdgeInsets.all(4.r) : EdgeInsets.zero,
       child: SizedBox(
@@ -45,11 +46,11 @@ class CustomIconButton extends StatelessWidget {
             shadowColor:
                 const Color.fromARGB(50, 0, 0, 0).withOpacity(shadowOpacity),
             backgroundColor: !disabled
-                ? backgroundColor ?? Get.theme.cardColor
-                : Get.theme.primaryColor.withOpacity(0.5),
+                ? backgroundColor ?? theme.cardColor
+                : theme.primaryColor.withOpacity(0.5),
             shape: RoundedRectangleBorder(
               side: BorderSide(
-                color: Get.theme.highlightColor,
+                color: theme.highlightColor,
                 width: 1.w,
               ),
               borderRadius: BorderRadius.circular(4.r),

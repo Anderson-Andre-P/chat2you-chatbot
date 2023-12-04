@@ -84,6 +84,7 @@ class SettingsItemWidget extends StatefulWidget {
 class _SettingsItemWidgetState extends State<SettingsItemWidget> {
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Column(
       children: [
         ListTile(
@@ -97,7 +98,7 @@ class _SettingsItemWidgetState extends State<SettingsItemWidget> {
           ),
           title: Text(
             widget.item.phrase,
-            style: Get.theme.textTheme.bodyMedium?.copyWith(
+            style: theme.textTheme.bodyMedium?.copyWith(
                 fontSize: 16.sp,
                 color: widget.item.phraseColor ??
                     (Theme.of(context).brightness == Brightness.light
@@ -106,7 +107,7 @@ class _SettingsItemWidgetState extends State<SettingsItemWidget> {
                 // height: 1.15,
                 ),
           ),
-          tileColor: Get.theme.scaffoldBackgroundColor,
+          tileColor: theme.scaffoldBackgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(0.r),
           ),
@@ -139,6 +140,7 @@ class ToggleSettingsItem extends StatefulWidget {
 class _ToggleSettingsItemState extends State<ToggleSettingsItem> {
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Column(
       children: [
         GetBuilder<SettingsController>(
@@ -153,20 +155,20 @@ class _ToggleSettingsItemState extends State<ToggleSettingsItem> {
                         ? LightThemeColors.iconColor
                         : DarkThemeColors.iconColor),
               ),
-              tileColor: Get.theme.scaffoldBackgroundColor,
+              tileColor: theme.scaffoldBackgroundColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(0.r),
               ),
               title: SwitchListTile(
                 onChanged: controller.changeTheme,
                 value: !controller.isLightTheme,
-                activeColor: Get.theme.primaryColor,
+                activeColor: theme.primaryColor,
                 dense: true,
                 contentPadding: EdgeInsets.all(0.w),
-                tileColor: Get.theme.scaffoldBackgroundColor,
+                tileColor: theme.scaffoldBackgroundColor,
                 title: Text(
                   widget.item.phrase,
-                  style: Get.theme.textTheme.bodyMedium?.copyWith(
+                  style: theme.textTheme.bodyMedium?.copyWith(
                     fontSize: 16.sp,
                   ),
                 ),

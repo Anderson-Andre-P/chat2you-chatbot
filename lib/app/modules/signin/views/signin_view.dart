@@ -27,6 +27,7 @@ class _SigninViewState extends State<SigninView> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0.w),
@@ -81,7 +82,7 @@ class _SigninViewState extends State<SigninView> {
                     child: Text(
                       Strings.forgotPassword.tr,
                       textAlign: TextAlign.end,
-                      style: Get.theme.textTheme.displayMedium?.copyWith(
+                      style: theme.textTheme.displayMedium?.copyWith(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.normal,
                         color: Colors.red,
@@ -94,7 +95,7 @@ class _SigninViewState extends State<SigninView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Checkbox(
-                    activeColor: Get.theme.primaryColor,
+                    activeColor: theme.primaryColor,
                     value: rememberMe,
                     onChanged: (value) {
                       setState(() {

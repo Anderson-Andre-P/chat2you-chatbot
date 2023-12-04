@@ -6,19 +6,20 @@ class LinearLoadingIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Center(
       child: Container(
         width: 200,
         height: 20,
         decoration: BoxDecoration(
-          border: Border.all(color: Get.theme.cardColor),
+          border: Border.all(color: theme.cardColor),
           borderRadius: BorderRadius.circular(10),
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: LinearProgressIndicator(
-            backgroundColor: Get.theme.cardColor,
-            valueColor: AlwaysStoppedAnimation<Color>(Get.theme.primaryColor),
+            backgroundColor: theme.cardColor,
+            valueColor: AlwaysStoppedAnimation<Color>(theme.primaryColor),
           ),
         ),
       ),

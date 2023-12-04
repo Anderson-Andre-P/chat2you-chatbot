@@ -43,11 +43,13 @@ class HelpcenterView extends GetView<HelpcenterController> {
             ),
             8.verticalSpace,
             _buildFAQItem(
+              context: context,
               question: 'How do I create an account?',
               answer:
                   'To create an account, click on the "Sign Up" button and follow the on-screen instructions.',
             ),
             _buildFAQItem(
+              context: context,
               question: 'How do I reset my password?',
               answer:
                   'You can reset your password by clicking on the "Forgot Password" link on the login screen.',
@@ -64,13 +66,17 @@ class HelpcenterView extends GetView<HelpcenterController> {
     );
   }
 
-  Widget _buildFAQItem({required String question, required String answer}) {
+  Widget _buildFAQItem(
+      {required BuildContext context,
+      required String question,
+      required String answer}) {
+    final theme = context.theme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           question,
-          style: Get.theme.textTheme.bodyLarge?.copyWith(
+          style: theme.textTheme.bodyLarge?.copyWith(
             fontWeight: FontWeight.w600,
             fontSize: 18,
           ),
@@ -78,7 +84,7 @@ class HelpcenterView extends GetView<HelpcenterController> {
         const SizedBox(height: 8),
         Text(
           answer,
-          style: Get.theme.textTheme.bodyLarge?.copyWith(
+          style: theme.textTheme.bodyLarge?.copyWith(
             fontWeight: FontWeight.normal,
           ),
         ),

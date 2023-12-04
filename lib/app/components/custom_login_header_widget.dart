@@ -14,6 +14,7 @@ class CustomLoginHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Column(
       children: [
         CustomImageView(
@@ -25,7 +26,7 @@ class CustomLoginHeader extends StatelessWidget {
         Text(
           Strings.titleOfTheApp.tr,
           textAlign: TextAlign.center,
-          style: Get.theme.textTheme.displayMedium?.copyWith(
+          style: theme.textTheme.displayMedium?.copyWith(
             fontSize: 46.sp,
             fontWeight: FontWeight.normal,
             height: 1.2.h,
@@ -35,7 +36,7 @@ class CustomLoginHeader extends StatelessWidget {
         Text(
           Strings.loginSubtitle.tr,
           textAlign: TextAlign.center,
-          style: Get.theme.textTheme.bodyMedium?.copyWith(
+          style: theme.textTheme.bodyMedium?.copyWith(
             fontSize: 15.sp,
             fontWeight: FontWeight.normal,
           ),

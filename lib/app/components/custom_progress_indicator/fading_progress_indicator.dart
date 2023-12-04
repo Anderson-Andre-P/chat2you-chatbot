@@ -25,13 +25,14 @@ class _FadingLoadingIndicatorState extends State<FadingLoadingIndicator>
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Center(
       child: FadeTransition(
         opacity: _animation,
         child: Container(
           width: 50,
           height: 50,
-          color: Get.theme.primaryColor,
+          color: theme.primaryColor,
         ),
       ),
     );

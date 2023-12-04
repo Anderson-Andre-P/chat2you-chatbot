@@ -50,6 +50,7 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Material(
       color: Colors.transparent,
       elevation: 0,
@@ -72,8 +73,8 @@ class CustomButton extends StatelessWidget {
               ),
               border: Border.all(color: borderColor ?? Colors.transparent),
               color: !disabled
-                  ? backgroundColor ?? Get.theme.primaryColor
-                  : Get.theme.primaryColor.withOpacity(0.5),
+                  ? backgroundColor ?? theme.primaryColor
+                  : theme.primaryColor.withOpacity(0.5),
               gradient: gradient,
               boxShadow: !hasShadow || disabled
                   ? null
@@ -94,7 +95,7 @@ class CustomButton extends StatelessWidget {
               children: [
                 Text(
                   text,
-                  style: Get.theme.textTheme.bodySmall?.copyWith(
+                  style: theme.textTheme.bodySmall?.copyWith(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
                     color: foregroundColor ?? Colors.white,

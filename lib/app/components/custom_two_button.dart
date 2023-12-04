@@ -19,6 +19,7 @@ class CustomTwoButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -27,8 +28,8 @@ class CustomTwoButton extends StatelessWidget {
             text: cancelText,
             onPressed: cancelOnPressed,
             hasShadow: false,
-            backgroundColor: Get.theme.primaryColor.withOpacity(0.0),
-            borderColor: Get.theme.primaryColor,
+            backgroundColor: theme.primaryColor.withOpacity(0.0),
+            borderColor: theme.primaryColor,
           ),
         ),
         16.horizontalSpace,

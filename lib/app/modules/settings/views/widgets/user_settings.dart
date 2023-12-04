@@ -17,13 +17,14 @@ class UserSettingsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return GestureDetector(
       onTap: onPressed,
       child: Row(
         children: [
           CircleAvatar(
             radius: 30,
-            backgroundColor: Get.theme.colorScheme.background,
+            backgroundColor: theme.colorScheme.background,
             child: const Icon(
               Icons.person_outlined,
               size: 48,

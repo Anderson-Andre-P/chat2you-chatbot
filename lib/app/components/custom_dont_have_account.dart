@@ -13,20 +13,21 @@ class CustomDontHaveAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return RichText(
       text: TextSpan(
           text: Strings.dontaHaveAccount.tr,
-          style: Get.theme.textTheme.bodyMedium?.copyWith(
+          style: theme.textTheme.bodyMedium?.copyWith(
             fontSize: 14.sp,
             fontWeight: FontWeight.normal,
           ),
           children: [
             TextSpan(
               text: " ${Strings.signUpButton.tr}",
-              style: Get.theme.textTheme.bodyMedium?.copyWith(
+              style: theme.textTheme.bodyMedium?.copyWith(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.normal,
-                color: Get.theme.primaryColor,
+                color: theme.primaryColor,
               ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {

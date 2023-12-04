@@ -11,13 +11,14 @@ class CustomDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       child: Row(
         children: [
           Expanded(
             child: Divider(
-              color: Get.theme.dividerColor,
+              color: theme.dividerColor,
               thickness: 1,
             ),
           ),
@@ -26,7 +27,7 @@ class CustomDivider extends StatelessWidget {
             child: Text(
               Strings.or.tr,
               textAlign: TextAlign.center,
-              style: Get.theme.textTheme.displayMedium?.copyWith(
+              style: theme.textTheme.displayMedium?.copyWith(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.normal,
               ),
@@ -34,7 +35,7 @@ class CustomDivider extends StatelessWidget {
           ),
           Expanded(
             child: Divider(
-              color: Get.theme.dividerColor,
+              color: theme.dividerColor,
               thickness: 1,
             ),
           ),

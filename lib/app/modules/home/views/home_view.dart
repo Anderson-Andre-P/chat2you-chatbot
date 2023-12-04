@@ -175,8 +175,9 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Drawer(
-      backgroundColor: Get.theme.scaffoldBackgroundColor,
+      backgroundColor: theme.scaffoldBackgroundColor,
       child: Column(
         children: [
           const UserAccountsDrawerHeader(
@@ -189,13 +190,13 @@ class CustomDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.person_outlined),
             title: Text(Strings.profile.tr),
-            tileColor: Get.theme.scaffoldBackgroundColor,
+            tileColor: theme.scaffoldBackgroundColor,
             onTap: () => Get.toNamed(Routes.PROFILE),
           ),
           ListTile(
             leading: const Icon(Icons.settings_outlined),
             title: Text(Strings.settings.tr),
-            tileColor: Get.theme.scaffoldBackgroundColor,
+            tileColor: theme.scaffoldBackgroundColor,
             onTap: () {
               Get.toNamed(Routes.SETTINGS);
             },

@@ -35,6 +35,7 @@ class UpgradePlanWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Padding(
       padding: const EdgeInsets.only(
         right: 24,
@@ -91,8 +92,7 @@ class UpgradePlanWidget extends StatelessWidget {
                   ),
                   Theme(
                     data: Theme.of(context).copyWith(
-                      dividerColor:
-                          Get.theme.dividerColor, // Escolha a cor desejada
+                      dividerColor: theme.dividerColor,
                     ),
                     child: DataTable(
                       columns: const <DataColumn>[
@@ -122,7 +122,7 @@ class UpgradePlanWidget extends StatelessWidget {
                             DataCell(
                               Text(
                                 Strings.advancedAssitance.tr,
-                                style: Get.theme.textTheme.bodyLarge?.copyWith(
+                                style: theme.textTheme.bodyLarge?.copyWith(
                                   // fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   color: Colors.white,
@@ -142,7 +142,7 @@ class UpgradePlanWidget extends StatelessWidget {
                             DataCell(
                               Text(
                                 Strings.accessToExclusiveContent.tr,
-                                style: Get.theme.textTheme.bodyLarge?.copyWith(
+                                style: theme.textTheme.bodyLarge?.copyWith(
                                   // fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   color: Colors.white,
@@ -162,7 +162,7 @@ class UpgradePlanWidget extends StatelessWidget {
                             DataCell(
                               Text(
                                 Strings.prioritySupport.tr,
-                                style: Get.theme.textTheme.bodyLarge?.copyWith(
+                                style: theme.textTheme.bodyLarge?.copyWith(
                                   // fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   color: Colors.white,
@@ -182,7 +182,7 @@ class UpgradePlanWidget extends StatelessWidget {
                             DataCell(
                               Text(
                                 Strings.customizingAutomaticReplies.tr,
-                                style: Get.theme.textTheme.bodyLarge?.copyWith(
+                                style: theme.textTheme.bodyLarge?.copyWith(
                                   // fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   color: Colors.white,
@@ -202,7 +202,7 @@ class UpgradePlanWidget extends StatelessWidget {
                             DataCell(
                               Text(
                                 Strings.detailedAnalysis.tr,
-                                style: Get.theme.textTheme.bodyLarge?.copyWith(
+                                style: theme.textTheme.bodyLarge?.copyWith(
                                   // fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   color: Colors.white,
@@ -222,7 +222,7 @@ class UpgradePlanWidget extends StatelessWidget {
                             DataCell(
                               Text(
                                 Strings.offlineAccess.tr,
-                                style: Get.theme.textTheme.bodyLarge?.copyWith(
+                                style: theme.textTheme.bodyLarge?.copyWith(
                                   // fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   color: Colors.white,
@@ -242,7 +242,7 @@ class UpgradePlanWidget extends StatelessWidget {
                             DataCell(
                               Text(
                                 Strings.integrationWithSocialNetworks.tr,
-                                style: Get.theme.textTheme.bodyLarge?.copyWith(
+                                style: theme.textTheme.bodyLarge?.copyWith(
                                   // fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   color: Colors.white,
@@ -265,7 +265,7 @@ class UpgradePlanWidget extends StatelessWidget {
                     text: 'Get Started',
                     width: 320,
                     hasShadow: false,
-                    backgroundColor: Get.theme.brightness == Brightness.dark
+                    backgroundColor: theme.brightness == Brightness.dark
                         ? LightThemeColors.accentColor
                         : DarkThemeColors.accentColor,
                     onPressed: () {},

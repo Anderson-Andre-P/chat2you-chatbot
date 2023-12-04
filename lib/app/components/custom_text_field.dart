@@ -30,6 +30,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return TextFormField(
       key: widget.key, // Adicionando uma chave única
       controller: widget.controller,
@@ -58,7 +59,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           borderRadius: BorderRadius.all(Radius.circular(4.r)),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Get.theme.primaryColor),
+          borderSide: BorderSide(color: theme.primaryColor),
           borderRadius: BorderRadius.all(Radius.circular(4.r)),
         ),
         // enabledBorder: OutlineInputBorder(

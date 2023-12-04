@@ -26,6 +26,7 @@ class _ScalingLoadingIndicatorState extends State<ScalingLoadingIndicator>
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     return Center(
       child: ScaleTransition(
         scale: _animation,
@@ -33,7 +34,7 @@ class _ScalingLoadingIndicatorState extends State<ScalingLoadingIndicator>
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-            color: Get.theme.primaryColor,
+            color: theme.primaryColor,
             shape: BoxShape.circle,
           ),
         ),
